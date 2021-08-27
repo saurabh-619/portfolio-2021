@@ -1,0 +1,51 @@
+.navbar {
+  width: 94vw;
+  position: fixed;
+  top: 1.5rem;
+  left: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+
+  & .logo-icon,
+  & .ham-icon {
+    z-index: 2;
+    cursor: pointer;
+  }
+}
+
+.navmenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $bg;
+  padding: 5rem 3rem 2rem;
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+    text-align: center;
+    margin-top: 1rem;
+
+    & li {
+      margin: 0.8rem;
+      cursor: pointer;
+      transition: 800ms text-fill-color ease-in-out;
+      display: inline;
+
+      &:hover {
+        background: $sb-brand;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}

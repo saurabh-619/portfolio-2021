@@ -20,6 +20,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "framer-motion": "4.1.17",
     "gatsby": "2.15.12",
     "gatsby-plugin-sass": "2.1.14",
     "gatsby-plugin-typescript": "2.1.7",

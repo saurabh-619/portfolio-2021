@@ -1,0 +1,7 @@
+@mixin setFont($ff: $gilroy, $fw: bold, $fs: 160px, $lh: 198px) {
+  font-family: $ff !important;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  font-style: normal;
+}

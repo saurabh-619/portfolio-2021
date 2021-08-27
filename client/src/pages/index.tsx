@@ -1,3 +1,13 @@
 import React from 'react';
+import '../styles/main.scss';
+import { Home } from '../screens';
 
-export default () => <div>Hello world!</div>;
+const Skelaton: React.FC = () => {
+  return (
+    <div id="App">
+      <Home />
+    </div>
+  );
+};
+
+export default Skelaton;

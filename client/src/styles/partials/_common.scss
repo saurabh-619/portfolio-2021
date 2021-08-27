@@ -1,0 +1,79 @@
+.font-sbbrand {
+  @include setFont($ff: $ailerons, $fw: 400, $fs: 120px, $lh: 144px);
+}
+
+.font-brand160-B {
+  @include setFont($fw: $bold, $fs: 160px, $lh: 198px);
+}
+
+.font-brand120-B {
+  @include setFont($fw: $bold, $fs: 120px, $lh: 149px);
+}
+
+.font-brand90-B {
+  @include setFont($fw: $bold, $fs: 90px, $lh: 111px);
+}
+
+.font-h160-B {
+  @include setFont($fw: $bold, $fs: 60px, $lh: 74px);
+}
+
+.font-h250-B {
+  @include setFont($fw: $bold, $fs: 50px, $lh: 62px);
+}
+
+.font-h340-B {
+  @include setFont($fw: $bold, $fs: 40px, $lh: 50px);
+}
+
+.font-h430-B {
+  @include setFont($fw: $bold, $fs: 30px, $lh: 37px);
+}
+
+.font-h430-M {
+  @include setFont($ff: $gilroy-md, $fw: $med, $fs: 30px, $lh: 36px);
+}
+
+.font-h430-R {
+  @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 30px, $lh: 36px);
+}
+
+.font-intro24-M {
+  @include setFont($ff: $gilroy-md, $fw: $med, $fs: 24px, $lh: 29px);
+}
+
+.font-intro24-R {
+  @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 24px, $lh: 29px);
+}
+
+.font-main20-B {
+  @include setFont($fw: $bold, $fs: 20px, $lh: 25px);
+}
+
+.font-main20-R {
+  @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 20px, $lh: 24px);
+}
+
+.font-medium17-M {
+  @include setFont($ff: $gilroy-md, $fw: $med, $fs: 17px, $lh: 21px);
+}
+
+.font-medium17-R {
+  @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 17px, $lh: 21px);
+}
+
+.font-caption15-M {
+  @include setFont($ff: $gilroy-md, $fw: $med, $fs: 15px, $lh: 18px);
+}
+
+.font-caption15-R {
+  @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 15px, $lh: 18px);
+}
+
+.font-caption13-M {
+  @include setFont($ff: $gilroy-md, $fw: $med, $fs: 13px, $lh: 16px);
+}
+
+.font-caption13-R {
+  @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 13px, $lh: 16px);
+}
