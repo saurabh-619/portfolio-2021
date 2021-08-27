@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "I am web and app developer. I convert chai into code.",
   "scripts": {
-    "build": "rimraf public && npm run format && npm run lint && npm run type-check && gatsby build",
+    "build1": "rimraf public && npm run format && npm run lint && npm run type-check && gatsby build",
+    "build": "rimraf public && gatsby build",
     "check-format": "prettier --list-different \"src/**/*.{ts,tsx,css,html,json,md}\" ",
     "create-types-for-css-modules": "tcm src -c",
     "create-types-for-sass-modules": "tsm src --nameFormat camel",
