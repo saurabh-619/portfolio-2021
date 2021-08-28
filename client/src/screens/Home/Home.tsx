@@ -1,11 +1,9 @@
 import React from 'react';
-import { Navbar } from '../../components';
 import { sushantImg } from '../../utills/constants';
 
 export const Home = () => {
   return (
-    <div id="home">
-      <Navbar />
+    <div id="home" className="container snap">
       <div className="wrapper">
         <div className="left">
           <div className="content">

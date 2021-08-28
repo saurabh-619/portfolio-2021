@@ -1,3 +1,7 @@
+.container {
+  padding: 0 3rem;
+}
+
 .font-sbbrand {
   @include setFont($ff: $ailerons, $fw: 400, $fs: 120px, $lh: 144px);
 }
@@ -16,6 +20,10 @@
 
 .font-h160-B {
   @include setFont($fw: $bold, $fs: 60px, $lh: 74px);
+}
+
+.font-section160-B {
+  @include setFont($fw: $bold, $fs: 160px, $lh: 198px);
 }
 
 .font-h250-B {

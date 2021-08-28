@@ -1,3 +1,27 @@
+// Constants
+@mixin textSelection {
+  ::selection {
+    color: $primary;
+  }
+}
+
+@mixin scrollBar {
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $bg;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $grey;
+    border-radius: 3px;
+  }
+}
+
 @mixin setFont($ff: $gilroy, $fw: bold, $fs: 160px, $lh: 198px) {
   font-family: $ff !important;
   font-weight: $fw;

@@ -1,5 +1,7 @@
 #home {
+  padding: $padding-page;
   z-index: 0;
+  height: 100vh;
 
   & .wrapper {
     display: flex;
@@ -39,7 +41,6 @@
     }
 
     & .left {
-      height: 80vh;
       display: flex;
       width: 50%;
       flex-direction: column;
@@ -51,12 +52,12 @@
         & .caption {
           color: $white60;
           margin-top: 2rem;
+          padding-left: 1rem;
         }
       }
     }
 
     & .right {
-      height: 80vh;
       margin-left: auto;
       margin-right: 2rem;
       img {
