@@ -1,7 +1,91 @@
 #works {
   & .work {
     height: 100vh !important;
-    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background-size: cover !important;
+    object-fit: cover;
     background-repeat: no-repeat;
+
+    & .mockupImg {
+      position: absolute;
+      bottom: 0;
+      height: 95%;
+      width: auto;
+    }
+
+    & .content {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      height: 50vh;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(13, 13, 13, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+
+      & .left {
+        height: 90%;
+        width: 70%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 0 3rem;
+
+        & a.name {
+          text-decoration: none;
+          color: $white;
+          @include transEasy;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+
+        & .desc {
+          margin-top: 0.5rem;
+          color: $white60;
+        }
+
+        & .technologies {
+          margin-top: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          & .tech {
+            margin-right: 2rem;
+            color: $secondary;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            & .dot {
+              height: 10px;
+              width: 10px;
+              margin-right: 0.5rem;
+            }
+
+            & .title {
+            }
+          }
+        }
+      }
+      & .right {
+        position: absolute;
+        right: 3rem !important;
+        bottom: 0;
+      }
+    }
   }
 }

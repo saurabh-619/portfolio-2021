@@ -11,6 +11,7 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 * {
@@ -28,6 +29,10 @@ html {
   min-height: 100vh;
 
   @include textSelection;
+
+  & a {
+    text-decoration: none;
+  }
 }
 .snap {
   scroll-snap-align: start;
@@ -36,3 +41,7 @@ html {
 @import './partials/navbar';
 @import './screens/section';
 @import './screens/works';
+@import './screens/blogs';
+@import './screens/skills';
+@import './screens/about';
+@import './screens/contact';

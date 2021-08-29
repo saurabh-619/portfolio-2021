@@ -4,24 +4,30 @@ class Work {
   id: string;
   name: string;
   desc: string;
-  technology: TechnologiesEnum[];
+  technologies: TechnologiesEnum[];
   bgImageUrl: string;
+  mockupUrl: string;
   url: string;
+  bgColor: string;
 
   constructor(
     id = '01',
     name = 'Great Project',
     desc = 'Great Desc',
-    technology = [TechnologiesEnum.flutter],
+    technologies = [TechnologiesEnum.flutter],
     bgImageUrl: string,
+    mockupUrl: string,
     url = 'http://localhost:5000',
+    bgColor: string,
   ) {
     this.id = id;
     this.name = name;
     this.desc = desc;
-    this.technology = technology;
+    this.technologies = technologies;
     this.bgImageUrl = bgImageUrl;
+    this.mockupUrl = mockupUrl;
     this.url = url;
+    this.bgColor = bgColor;
   }
 }
 
@@ -37,7 +43,9 @@ export const worksData: WorkType[] = [
       TechnologiesEnum.socketio,
     ],
     '/images/bgs/coderhouse.jpg',
+    '',
     'https://codershouse.netlify.app/',
+    '',
   ),
   new Work(
     '02',
@@ -53,7 +61,9 @@ export const worksData: WorkType[] = [
       TechnologiesEnum.firebase,
     ],
     '/images/bgs/project-tracker.svg',
+    '/images/works/projecttracker.png',
     'https://project-tracker-web.herokuapp.com/',
+    '#ffc93c',
   ),
   new Work(
     '03',
@@ -68,7 +78,9 @@ export const worksData: WorkType[] = [
       TechnologiesEnum.mongodb,
     ],
     '/images/bgs/kira.svg',
+    '/images/works/kira.png',
     'https://kira-skin-cancer.netlify.app/',
+    '#ff2e63',
   ),
   new Work(
     '04',
@@ -76,7 +88,9 @@ export const worksData: WorkType[] = [
     'shopping app',
     [TechnologiesEnum.flutter, TechnologiesEnum.firebase, TechnologiesEnum.razorpay],
     '/images/bgs/sbcart.png',
+    '/images/works/sbcart.png',
     'https://drive.google.com/file/d/1H_1xS16hFBAKEzUsPQySHXKmJ0vCu1T5/view?usp=drivesdk',
+    '#032b5c',
   ),
   new Work(
     '05',
@@ -84,6 +98,8 @@ export const worksData: WorkType[] = [
     'social media app',
     [TechnologiesEnum.flutter, TechnologiesEnum.firebase, TechnologiesEnum.googleoauth],
     '/images/bgs/homiegram.png',
+    '/images/works/homiegram.png',
     'https://drive.google.com/file/d/1FIcY_z7b6vqSaoudrm7oKSRPmZHmqfHn/view?usp=drivesdk',
+    '#fe8668',
   ),
 ];

@@ -2,6 +2,49 @@
   padding: 0 3rem;
 }
 
+.top-heading-padding {
+  padding-top: 15vh;
+}
+
+.pill {
+  border-radius: 10000;
+}
+
+.py {
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+}
+
+.px {
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+}
+
+.pb {
+  &-2 {
+    padding-bottom: 2rem;
+  }
+  &-3 {
+    padding-bottom: 3rem;
+  }
+}
+
+.font-glass-name {
+  @include setFont($ff: $ailerons, $fw: 400, $fs: 30px, $lh: 36px);
+}
+
+.font-contact-tags {
+  @include setFont($ff: $ailerons, $fw: 400, $fs: 20px, $lh: 24px);
+}
+
 .font-sbbrand {
   @include setFont($ff: $ailerons, $fw: 400, $fs: 120px, $lh: 144px);
 }
@@ -44,6 +87,10 @@
 
 .font-h430-R {
   @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 30px, $lh: 36px);
+}
+
+.font-intro24-B {
+  @include setFont($fw: $bold, $fs: 24px, $lh: 29px);
 }
 
 .font-intro24-M {

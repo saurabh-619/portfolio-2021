@@ -1,0 +1,156 @@
+#about {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  & .green-blurred-ball {
+    background: url('/images/glass-ui/green-ball.svg') no-repeat;
+    background-size: contain;
+    height: 165px;
+    width: 165px;
+    position: absolute;
+    left: 30vw;
+    top: -30px;
+  }
+  & .red-blurred-ball {
+    background: url('/images/glass-ui/red-ball.svg') no-repeat;
+    background-size: contain;
+    height: 86px;
+    width: 86px;
+    position: absolute;
+    left: 6rem;
+    bottom: -4rem;
+    transform: translate(-50%, -50%);
+  }
+
+  & .content-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .left {
+      width: 45%;
+      & .tags {
+        font-style: italic;
+        color: $white45;
+        margin: 2rem;
+      }
+
+      & .content {
+        padding: 0 2rem;
+        & .title {
+          @include gradFont;
+        }
+
+        & .main-text {
+          margin: 1rem 0;
+          line-height: $lh;
+          color: $white85;
+        }
+      }
+    }
+
+    & .right {
+      width: 45%;
+
+      & .card {
+        height: 350px;
+        width: 550px;
+        position: relative;
+
+        .red-ball {
+          height: 200px;
+          width: 200px;
+          top: -70px;
+          right: -35px;
+
+          position: absolute;
+          z-index: 2;
+        }
+
+        .green-ball {
+          height: 100px;
+          width: 100px;
+
+          position: absolute;
+          bottom: 10px;
+          left: 20px;
+          z-index: 2 !important;
+        }
+
+        & .glass {
+          height: 350px;
+          width: 550px;
+          background: url('/images/glass-ui/parts/glass.svg') no-repeat;
+          padding: 2rem 1rem;
+          background-size: contain;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          position: relative;
+          z-index: 3;
+
+          & .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            margin-bottom: 4rem;
+
+            & .text {
+              & h4 {
+                margin-top: 1.5rem;
+                margin-left: 0.3rem;
+                color: $white60;
+              }
+            }
+
+            & .avatar-img {
+              height: 65px;
+              width: 65px;
+              border-radius: 40px;
+            }
+          }
+
+          & .links {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 0 2rem;
+
+            & .location {
+              color: $pt-brand;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              & span {
+                margin-right: 0.5rem;
+              }
+            }
+
+            & .resume {
+              color: $white;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              & span {
+                margin-left: 0.5rem;
+              }
+
+              @include transEasy;
+
+              &:hover {
+                transform: scale(0.99);
+                color: $white85;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

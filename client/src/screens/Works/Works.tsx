@@ -3,14 +3,12 @@ import { worksData } from './data';
 import { WorkType } from './../../types';
 import { Work } from './Work';
 
-const Works = () => {
+export const Works = () => {
   return (
     <div id="works">
       {worksData.map((work: WorkType) => (
-        <Work {...work} />
+        <Work key={work.id} {...work} />
       ))}
     </div>
   );
 };
-
-export default Works;
