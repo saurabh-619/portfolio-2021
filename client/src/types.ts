@@ -56,7 +56,12 @@ export interface SectionProps {
   sectionTitle: string;
 }
 export interface BlogFilterProps {
-  setBlogs: (dispatch: Dispatch<any>) => void;
+  totalData: BlogType[];
+  setTotalBlogs: any;
+  blogs?: [];
+  setBlogs?: (dispatch: Dispatch<any>) => void;
+  pageNumber?: number;
+  setPageNumber?: any;
 }
 
 // Classes types
@@ -72,6 +77,7 @@ export interface WorkType {
 }
 
 export interface BlogType {
+  id: number;
   name: string;
   desc: string;
   imgUrl: string;

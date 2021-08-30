@@ -154,3 +154,391 @@
     }
   }
 }
+
+@media screen and (max-width: $lg) {
+  #about {
+    & .green-blurred-ball {
+      height: 120px;
+      width: 120px;
+    }
+    & .red-blurred-ball {
+      height: 75px;
+      width: 75px;
+    }
+
+    & .content-wrapper {
+      & .left {
+        width: 50%;
+        & .tags {
+          margin: 1.5rem;
+        }
+
+        & .content {
+          padding: 0 2rem;
+        }
+      }
+
+      & .right {
+        & .card {
+          height: 300px;
+          width: 450px;
+
+          .red-ball {
+            height: 150px;
+            width: 150px;
+          }
+
+          .green-ball {
+            height: 80px;
+            width: 80px;
+            bottom: 20px;
+            left: 15px;
+          }
+
+          & .glass {
+            height: 300px;
+            width: 450px;
+
+            padding: 2rem 1rem;
+
+            & .header {
+              padding: 0 2rem;
+              margin-bottom: 0rem;
+
+              & .text {
+                & h4 {
+                  margin-top: 1rem;
+                  margin-left: 0.3rem;
+                  color: $white60;
+                }
+              }
+            }
+
+            & .links {
+              margin: 2rem 0;
+              & .location {
+                color: $pt-brand;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                & span {
+                  margin-right: 0.5rem;
+                }
+              }
+
+              & .resume {
+                color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & span {
+                  margin-left: 0.5rem;
+                }
+
+                @include transEasy;
+
+                &:hover {
+                  transform: scale(0.99);
+                  color: $white85;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  #about {
+    & .green-blurred-ball {
+      height: 90px;
+      width: 90px;
+    }
+    & .red-blurred-ball {
+      height: 65px;
+      width: 65px;
+    }
+
+    & .content-wrapper {
+      & .left {
+        width: 50%;
+        & .tags {
+          margin: 1.5rem;
+        }
+
+        & .content {
+          padding: 0 2rem;
+        }
+      }
+
+      & .right {
+        & .card {
+          height: 280px;
+          width: 370px;
+
+          .red-ball {
+            height: 120px;
+            width: 120px;
+          }
+
+          .green-ball {
+            height: 55px;
+            width: 55px;
+            bottom: 60px;
+            left: 15px;
+          }
+
+          & .glass {
+            height: 280px;
+            width: 370px;
+
+            padding: 2rem 1rem;
+
+            & .header {
+              padding: 0 2rem;
+              margin-bottom: 0rem;
+
+              & .text {
+                & h4 {
+                  font-size: 0.8rem;
+                  margin-top: 0.2rem;
+                }
+              }
+            }
+
+            & .links {
+              margin: 0.5rem 0 4rem;
+              align-items: center;
+              & .location {
+                & span {
+                  margin-right: 0.5rem;
+                  & svg {
+                    height: 17px;
+                    width: 17px;
+                  }
+                }
+              }
+
+              & .resume {
+                display: flex;
+                align-items: center;
+                & span {
+                  margin-left: 0.5rem;
+                  & svg {
+                    height: 17px;
+                    width: 17px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  #about {
+    min-height: 100vh;
+    & .green-blurred-ball {
+      height: 90px;
+      width: 90px;
+    }
+    & .red-blurred-ball {
+      height: 65px;
+      width: 65px;
+    }
+
+    & .content-wrapper {
+      flex-direction: column;
+
+      & .left {
+        width: 100%;
+        order: 2;
+
+        & .tags {
+          margin: 1rem 1.5rem;
+        }
+
+        & .content {
+          padding: 0 2rem;
+        }
+      }
+
+      & .right {
+        width: 100%;
+        order: 1;
+
+        margin-top: 1vh;
+
+        & .card {
+          height: 220px;
+          width: 370px;
+          margin: 0 auto;
+
+          .red-ball {
+            height: 90px;
+            width: 90px;
+            top: -30px;
+            right: 0px;
+          }
+
+          .green-ball {
+            height: 55px;
+            width: 55px;
+            bottom: 60px;
+            left: 15px;
+          }
+
+          & .glass {
+            height: 280px;
+            width: 370px;
+
+            padding: 2rem 1rem;
+
+            & .header {
+              padding: 0 2rem;
+              margin-bottom: 0rem;
+
+              & .text {
+                & h4 {
+                  font-size: 0.8rem;
+                  margin-top: 0.2rem;
+                }
+              }
+            }
+
+            & .links {
+              margin: 0.5rem 0 3rem;
+              align-items: center;
+
+              & h3 {
+                font-size: 1rem;
+              }
+              & .location {
+                & span {
+                  margin-right: 0.5rem;
+                  & svg {
+                    height: 15px;
+                    width: 15px;
+                  }
+                }
+              }
+
+              & .resume {
+                display: flex;
+                align-items: center;
+                & span {
+                  margin-left: 0.5rem;
+                  & svg {
+                    height: 15px;
+                    width: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  #about {
+    & .green-blurred-ball {
+      height: 70px;
+      width: 70px;
+    }
+    & .red-blurred-ball {
+      height: 50px;
+      width: 50px;
+      bottom: -50px;
+      right: 70px;
+    }
+
+    & .content-wrapper {
+      & .left {
+        & .tags {
+          margin: 1rem 0rem;
+        }
+
+        & .content {
+          padding: 0 1rem;
+
+          & .main-text {
+            margin: 0.5rem 0;
+          }
+        }
+      }
+
+      & .right {
+        & .card {
+          .red-ball {
+            height: 75px;
+            width: 75px;
+            top: -30px;
+            right: 0px;
+          }
+
+          .green-ball {
+            height: 45px;
+            width: 45px;
+            bottom: 0px;
+            left: 15px;
+          }
+
+          & .glass {
+            padding: 1rem 0rem;
+
+            & .header {
+              padding: 0 2rem;
+              margin-bottom: 0rem;
+
+              & .text {
+                & h4 {
+                  font-size: 0.8rem;
+                  margin-top: 0.2rem;
+                }
+              }
+            }
+
+            & .links {
+              margin: 0.5rem 0 3rem;
+              align-items: center;
+
+              & h3 {
+                font-size: 1rem;
+              }
+              & .location {
+                & span {
+                  margin-right: 0.5rem;
+                  & svg {
+                    height: 15px;
+                    width: 15px;
+                  }
+                }
+              }
+
+              & .resume {
+                display: flex;
+                align-items: center;
+                & span {
+                  margin-left: 0.5rem;
+                  & svg {
+                    height: 15px;
+                    width: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

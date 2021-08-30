@@ -19,3 +19,23 @@
     -webkit-text-stroke-color: $white45;
   }
 }
+
+@media screen and (max-width: $lg) {
+  #section {
+    padding: $padding-page;
+
+    & .right,
+    & .left {
+      position: absolute;
+      color: transparent;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: $white45;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+}
+
+@media screen and (max-width: $sm) {
+}

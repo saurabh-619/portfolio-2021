@@ -89,3 +89,40 @@
     }
   }
 }
+
+@media screen and (max-width: $lg) {
+  #works {
+    & .work {
+      & .content {
+        & .tech {
+          & .title {
+            font-size: 0.8rem;
+          }
+        }
+        & .right {
+          font-size: 9rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  #works {
+    & .work {
+      & .content {
+        & .tech {
+          & .title {
+            font-size: 0.75rem;
+          }
+        }
+        & .right {
+          font-size: 8rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+}

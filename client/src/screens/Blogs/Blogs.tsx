@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { bloggingData } from './data';
 import { BlogType } from './../../types';
 import Blog from './Blog';
@@ -6,14 +6,20 @@ import { useState } from 'react';
 import BlogFilter from './BlogFilter';
 
 export const Blogs = () => {
-  const [blogs, setBlogs] = useState<any>(bloggingData);
+  const [totalData, setTotalBlogs] = useState(bloggingData);
+  const [pageNumber, setPageNumber] = useState<number>(1);
 
   return (
     <div id="blogs" className="container pb-2 snap top-heading-padding">
       <h2 className="font-brand90-B">blogs</h2>
-      <BlogFilter setBlogs={setBlogs} />
+      <BlogFilter
+        totalData={totalData}
+        setTotalBlogs={setTotalBlogs}
+        pageNumber={pageNumber}
+        setPageNumber={setPageNumber}
+      />
       <div className="blogs-wrapper">
-        {blogs.map((blog: BlogType) => (
+        {totalData.slice((pageNumber - 1) * 4, pageNumber * 4).map((blog: BlogType) => (
           <Blog key={blog.timeStamp} {...blog} />
         ))}
       </div>

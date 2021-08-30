@@ -1,21 +1,33 @@
 import React from 'react';
 import { useState } from 'react';
 import { BlogFilterProps, Filters } from '../../types';
+import { sortPostsWithDate, sortPostsWithId, sortPostsWithLikes } from '../../utills/common';
+import { bloggingData } from './data';
 
-const BlogFilter: React.FC<BlogFilterProps> = ({ setBlogs }) => {
+const BlogFilter: React.FC<BlogFilterProps> = ({
+  totalData,
+  setTotalBlogs,
+  pageNumber,
+  setPageNumber,
+}) => {
   const [currentFilter, setCurrentFilter] = useState<Filters>(Filters.ALL);
-
-  const [totalPages, setTotalPages] = useState<number[]>(
-    Array.from({ length: 5 }, (v, i) => i + 1),
+  const [totalPages] = useState<number[]>(
+    Array.from({ length: totalData.length / 4 }, (_, i) => i + 1),
   );
-  const [currentPage, setCurrentPage] = useState<number>(1);
 
   const handleFilterClicked = (filter: Filters) => {
     setCurrentFilter(filter);
+    if (filter === Filters.MOST_LIKED) {
+      setTotalBlogs((prev: any) => [...sortPostsWithLikes(prev)]);
+    } else if (filter === Filters.RECENT) {
+      setTotalBlogs((prev: any) => [...sortPostsWithDate(prev)]);
+    } else if (filter === Filters.ALL) {
+      setTotalBlogs((prev: any) => [...sortPostsWithId(prev)]);
+    }
   };
 
   const handlePageClicked = (num: number) => {
-    setCurrentPage(num);
+    setPageNumber(num);
   };
 
   return (
@@ -44,7 +56,7 @@ const BlogFilter: React.FC<BlogFilterProps> = ({ setBlogs }) => {
         {totalPages.map((num: number) => (
           <h3
             key={num}
-            className={`page-number font-h430-B ${currentPage === num && 'selected'}`}
+            className={`page-number font-h430-B ${pageNumber === num && 'selected'}`}
             onClick={(e) => handlePageClicked(num)}
           >
             {num}

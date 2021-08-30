@@ -5,12 +5,24 @@ export const NavMenu = () => {
   return (
     <div className="navmenu">
       <ul>
-        <motion.li className="font-h160-B">home</motion.li>
-        <li className="font-h160-B">works</li>
-        <li className="font-h160-B">blogs</li>
-        <li className="font-h160-B">skills</li>
-        <li className="font-h160-B">about</li>
-        <li className="font-h160-B">contact</li>
+        <motion.li className="font-h160-B">
+          <a href="#home">home</a>
+        </motion.li>
+        <li className="font-h160-B">
+          <a href="#works">works</a>
+        </li>
+        <li className="font-h160-B">
+          <a href="#blogs">blogs</a>
+        </li>
+        <li className="font-h160-B">
+          <a href="#skills">skills</a>
+        </li>
+        <li className="font-h160-B">
+          <a href="#about">about</a>
+        </li>
+        <li className="font-h160-B">
+          <a href="#contact">contact</a>
+        </li>
       </ul>
     </div>
   );

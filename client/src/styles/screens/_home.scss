@@ -67,3 +67,117 @@
     }
   }
 }
+
+@media screen and (max-width: $lg) {
+  #home {
+  }
+}
+
+@media screen and (max-width: $md) {
+  #home {
+    & .wrapper {
+      height: 100%;
+
+      & .scroll1,
+      & .scroll2 {
+        & h4,
+        & a {
+          font-size: 0.75rem;
+          letter-spacing: 1px;
+        }
+      }
+
+      & .left {
+        & .content {
+          & .name {
+            font-size: 5rem;
+            line-height: 1.5;
+          }
+          & .caption {
+            margin-top: 1.5rem;
+            padding-left: 0.6rem;
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      & .right {
+        img {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  #home {
+    padding: $padding-page;
+    height: 100vh;
+
+    & .wrapper {
+      display: flex;
+
+      & .scroll1,
+      & .scroll2 {
+        margin-top: 3rem;
+        width: 20px;
+
+        position: absolute;
+        left: 3rem;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        & h4,
+        & a {
+          color: $white60;
+          writing-mode: vertical-rl;
+          text-decoration: none;
+        }
+
+        .down-border {
+          margin-top: 1rem;
+          width: 2px;
+          height: 80px;
+          background-color: $white60;
+        }
+      }
+      & .scroll2 {
+        position: absolute;
+        right: 3rem;
+        left: auto;
+        bottom: 0;
+      }
+
+      & .left {
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & .content {
+          margin-bottom: 2rem;
+          padding: 2rem 0 2rem 5rem;
+          & .caption {
+            color: $white60;
+            margin-top: 2rem;
+            padding-left: 1rem;
+          }
+        }
+      }
+
+      & .right {
+        margin-left: auto;
+        margin-right: 2rem;
+        img {
+          height: 100%;
+          width: 500px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

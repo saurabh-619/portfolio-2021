@@ -20,6 +20,12 @@ const Blog: React.FC<BlogType> = ({
         <motion.a className="font-h430-B name" href={blogUrl} target="_blank">
           {name.length < 50 ? name : `${name.substring(0, 50)} ...`}
         </motion.a>
+
+        {/* <br />
+        <br />
+        <h3>likes - {likes}</h3>
+        <br />
+        <h3>date - {new Date(parseInt(timeStamp)).toLocaleString()}</h3> */}
         <p className="font-medium17-R desc">
           {desc.length < 290 ? desc : `${desc.substring(0, 290)} ...`}
         </p>
@@ -36,7 +42,7 @@ const Blog: React.FC<BlogType> = ({
           </div>
           <div className="right">
             {technologies.map((tech: TechnologiesEnum, index) => (
-              <div className="icon-neu">
+              <div key={index} className="icon-neu">
                 <img
                   key={index}
                   src={getIconFromTech(tech.split('~')[0])}
