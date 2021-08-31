@@ -4,10 +4,20 @@ import { BlogType } from './../../types';
 import Blog from './Blog';
 import { useState } from 'react';
 import BlogFilter from './BlogFilter';
+import { useScroll } from '../../utills/useScroll';
 
 export const Blogs = () => {
   const [totalData, setTotalBlogs] = useState(bloggingData);
   const [pageNumber, setPageNumber] = useState<number>(1);
+
+  const [showBottomGradient, setShowBottomGradient] = useState(false);
+
+  const heightOfOnePage = window.innerHeight;
+  const { position } = useScroll();
+
+  useEffect(() => {
+    setShowBottomGradient(7 * heightOfOnePage < position && position < 11 * heightOfOnePage);
+  }, [position]);
 
   return (
     <div id="blogs" className="container pb-2 snap top-heading-padding">
@@ -23,7 +33,7 @@ export const Blogs = () => {
           <Blog key={blog.timeStamp} {...blog} />
         ))}
       </div>
-      <div className="linear-gradient"></div>
+      {showBottomGradient && <div className="linear-gradient"></div>}
     </div>
   );
 };

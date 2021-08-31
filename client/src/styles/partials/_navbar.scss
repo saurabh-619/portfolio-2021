@@ -1,8 +1,8 @@
 .navbar {
-  width: 94vw;
+  width: 100vw;
   position: fixed;
   top: 1.5rem;
-  left: 3rem;
+  padding: 0 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,6 +49,59 @@
 
       & a {
         color: $white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .navbar {
+    padding: 0 1.5rem;
+  }
+}
+
+@media screen and (max-width: $md) {
+  .navbar {
+    padding: 0 1.2rem;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .navbar {
+    padding: 0 1rem;
+    & .logo-icon,
+    & .ham-icon {
+      height: 35px;
+      width: 35px;
+    }
+  }
+
+  .navmenu {
+    & ul {
+      margin-top: 1rem;
+
+      & li {
+        margin: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .navbar {
+    padding: 0 1rem;
+    & .logo-icon,
+    & .ham-icon {
+      height: 30px;
+      width: 30px;
+    }
+  }
+  .navmenu {
+    & ul {
+      margin-top: 2rem;
+
+      & li {
+        margin: 0.3rem;
       }
     }
   }

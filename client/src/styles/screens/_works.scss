@@ -47,7 +47,7 @@
           @include transEasy;
 
           &:hover {
-            color: $primary;
+            transform: scale(0.99);
           }
         }
 
@@ -110,6 +110,16 @@
 @media screen and (max-width: $md) {
   #works {
     & .work {
+      align-items: flex-start;
+      background-position: 30% !important;
+
+      & .mockupImg {
+        position: absolute;
+        bottom: 10%;
+        height: 73%;
+        width: auto;
+      }
+
       & .content {
         & .tech {
           & .title {
@@ -117,7 +127,7 @@
           }
         }
         & .right {
-          font-size: 8rem;
+          font-size: 7rem;
         }
       }
     }
@@ -125,4 +135,76 @@
 }
 
 @media screen and (max-width: $sm) {
+  #works {
+    & .work {
+      align-items: flex-start;
+      background-position: 30% !important;
+
+      & .mockupImg {
+        bottom: 23%;
+        height: 55%;
+      }
+
+      & .content {
+        & .left {
+          height: 40%;
+          position: absolute;
+          bottom: 12%;
+          justify-content: center;
+          & .name {
+            font-size: 2rem;
+            width: 80vw;
+          }
+
+          & .desc {
+            margin: 0;
+          }
+          & .technologies {
+            display: none;
+          }
+        }
+        & .right {
+          font-size: 5.3rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  #works {
+    width: 100vw;
+    & .work {
+      align-items: flex-start;
+      background-position: 56% !important;
+
+      & .mockupImg {
+        bottom: 30%;
+        height: 45%;
+      }
+
+      & .content {
+        & .left {
+          height: 40%;
+          position: absolute;
+          bottom: 3vw;
+          justify-content: center;
+          padding: 0 1.5rem;
+          & .name {
+            font-size: 1.8rem;
+            line-height: normal;
+            width: 80vw;
+          }
+
+          & .desc {
+            margin: 0.5rem 0 0;
+          }
+        }
+        & .right {
+          font-size: 4.6rem;
+          right: 1.5rem !important;
+        }
+      }
+    }
+  }
 }

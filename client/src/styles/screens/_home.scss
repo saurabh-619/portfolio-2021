@@ -90,13 +90,11 @@
       & .left {
         & .content {
           & .name {
-            font-size: 5rem;
             line-height: 1.5;
           }
           & .caption {
             margin-top: 1.5rem;
             padding-left: 0.6rem;
-            font-size: 1.3rem;
           }
         }
       }
@@ -112,70 +110,76 @@
 
 @media screen and (max-width: $sm) {
   #home {
-    padding: $padding-page;
-    height: 100vh;
+    & .wrapper {
+      & .right {
+        img {
+          width: 40vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #home {
+    padding: 2rem 0;
 
     & .wrapper {
-      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
       & .scroll1,
       & .scroll2 {
         margin-top: 3rem;
         width: 20px;
-
-        position: absolute;
-        left: 3rem;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        left: 0.5rem;
 
         & h4,
         & a {
-          color: $white60;
-          writing-mode: vertical-rl;
-          text-decoration: none;
+          color: $white45;
+          font-size: 0.6rem;
         }
 
         .down-border {
-          margin-top: 1rem;
-          width: 2px;
-          height: 80px;
-          background-color: $white60;
+          width: 1.5px;
+          height: 40px;
         }
       }
       & .scroll2 {
-        position: absolute;
-        right: 3rem;
+        right: 0.5rem;
         left: auto;
-        bottom: 0;
       }
 
       & .left {
-        display: flex;
-        width: 50%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        order: 2;
+        width: 100%;
         & .content {
-          margin-bottom: 2rem;
-          padding: 2rem 0 2rem 5rem;
+          margin-bottom: 0rem;
+          padding: 2rem 0;
+
+          & br {
+            display: none;
+          }
+          & .name {
+            font-size: 2.3rem;
+          }
+
           & .caption {
-            color: $white60;
-            margin-top: 2rem;
-            padding-left: 1rem;
+            margin-top: 0.5rem;
+            text-align: center;
+            padding-left: 0.5rem;
+            font-size: 1rem;
           }
         }
       }
 
       & .right {
-        margin-left: auto;
-        margin-right: 2rem;
+        order: 1;
+        margin-left: 0;
+        margin-right: 0rem;
         img {
-          height: 100%;
-          width: 500px;
-          object-fit: contain;
+          width: 300px;
         }
       }
     }
