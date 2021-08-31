@@ -12,7 +12,7 @@ export const Navbar = () => {
     setNavClicked((prev) => !prev);
   };
 
-  const heightOfOnePage = window.innerHeight;
+  const heightOfOnePage = window ? window.innerHeight : 750;
   const { position } = useScroll();
 
   useEffect(() => {

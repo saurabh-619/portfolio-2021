@@ -12,7 +12,7 @@ export const Blogs = () => {
 
   const [showBottomGradient, setShowBottomGradient] = useState(false);
 
-  const heightOfOnePage = window.innerHeight;
+  const heightOfOnePage = window ? window.innerHeight : 750;
   const { position } = useScroll();
 
   useEffect(() => {
