@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { useScroll } from '../utills/useScroll';
 import { Hamburger } from './Hamburger';
@@ -16,14 +17,16 @@ export const Navbar = () => {
   const { position } = useScroll();
 
   useEffect(() => {
-    setShowLogo(position < heightOfOnePage || position > 15 * heightOfOnePage);
+    setShowLogo(
+      position < heightOfOnePage - heightOfOnePage / 100 || position > 15 * heightOfOnePage,
+    );
   }, [position]);
 
   return (
     <div className="navbar">
       {showLogo ? <Logo size={50} /> : <div></div>}
       {<Hamburger size={40} isNavClicked={isNavClicked} onClick={handleNavClicked} />}
-      {isNavClicked && <NavMenu />}
+      <AnimatePresence>{isNavClicked && <NavMenu />}</AnimatePresence>
     </div>
   );
 };

@@ -19,26 +19,26 @@ export const Section: React.FC<SectionProps> = ({ sectionTitle }) => {
       animate.start({
         y: 0,
         opacity: 1,
-        transition: { duration: 1, delay: 0.1, type: 'spring', bounce: 0.3 },
+        transition: { duration: 1, delay: 0.4 },
       });
       animateBorderedTextLeft.start({
         x: '-100%',
-        transition: { duration: 1, delay: 0.4, type: 'spring', bounce: 0.1 },
+        transition: { duration: 0.7, delay: 1 },
       });
       animateBorderedTextRight.start({
         x: '100%',
-        transition: { duration: 1, delay: 0.4, type: 'spring', bounce: 0.1 },
+        transition: { duration: 0.7, delay: 1 },
       });
-    } else {
-      // animate.start({
-      //   y: 100,
-      //   opacity: 0,
-      // });
     }
   }, [inView]);
 
   return (
-    <motion.div id="section" className="container snap" animate={animate} initial={{ y: 100 }}>
+    <motion.div
+      id="section"
+      className="container snap"
+      animate={animate}
+      initial={{ y: 300, opacity: 0 }}
+    >
       <motion.h1 className="font-section160-B left" animate={animateBorderedTextLeft}>
         {sectionTitle}
       </motion.h1>

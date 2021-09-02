@@ -48,6 +48,21 @@
       & .content {
         margin-bottom: 2rem;
         padding: 2rem 0 2rem 5rem;
+
+        & .name-wrappper {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+
+          align-items: flex-start;
+
+          & .name-wrappper-top,
+          & .name-wrappper-bottom {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+        }
         & .caption {
           color: $white60;
           margin-top: 2rem;
@@ -158,6 +173,17 @@
           margin-bottom: 0rem;
           padding: 2rem 0;
 
+          & .name-wrappper {
+            flex-direction: row;
+            // justify-content: space-between;
+            align-items: center;
+
+            & .name-wrappper-top,
+            & .name-wrappper-bottom {
+              margin: 0 0.5rem;
+              align-items: center;
+            }
+          }
           & br {
             display: none;
           }
