@@ -5,6 +5,7 @@ import Blog from './Blog';
 import { useState } from 'react';
 import BlogFilter from './BlogFilter';
 import { useScroll } from '../../utills/useScroll';
+import { heightOfOnePage } from '../../utills/constants';
 
 export const Blogs = () => {
   const [totalData, setTotalBlogs] = useState(bloggingData);
@@ -12,7 +13,6 @@ export const Blogs = () => {
 
   const [showBottomGradient, setShowBottomGradient] = useState(false);
 
-  const heightOfOnePage = typeof window !== 'undefined' ? window.innerHeight : 750;
   const { position } = useScroll();
 
   useEffect(() => {

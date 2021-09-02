@@ -89,3 +89,5 @@ export const socialMediaLinks = [
   ['/images/socials/medium.svg', 'https://medium.com/@saurabh107'],
   ['/images/socials/instagram.svg', 'https://www.instagram.com/saurabh_bomble619/'],
 ];
+
+export const heightOfOnePage = typeof window !== 'undefined' ? window.innerHeight : 750;

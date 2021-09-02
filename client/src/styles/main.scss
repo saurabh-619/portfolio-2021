@@ -2,6 +2,14 @@
 @import './partials/mixins';
 @import './partials/common';
 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: gilroy !important;
+  box-sizing: border-box;
+  @include scrollBar;
+}
+
 html {
   scroll-snap-type: y mandatory;
   scroll-snap-points-y: repeat(100vh);
@@ -11,15 +19,11 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: gilroy !important;
-  box-sizing: border-box;
-  @include scrollBar;
+body {
+  overflow-x: hidden !important;
 }
 
 #App {
