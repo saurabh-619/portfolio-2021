@@ -1,3 +1,4 @@
+import { AnimationControls } from 'framer-motion';
 import { Dispatch } from 'react';
 
 export enum LogoVarient {
@@ -86,4 +87,5 @@ export interface BlogType {
   timeStamp: string;
   technologies: TechnologiesEnum[];
   likes: number;
+  blogController: AnimationControls;
 }

@@ -11,11 +11,12 @@
 }
 
 html {
-  scroll-snap-type: y mandatory;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
-  scroll-snap-stop: normal;
-  scroll-behavior: smooth !important;
+  // scroll-snap-type: y mandatory;
+  // scroll-snap-points-y: repeat(100vh);
+  // scroll-snap-type: y mandatory;
+  // scroll-snap-stop: normal;
+  // scroll-behavior: smooth !important;
+
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,7 +40,7 @@ body {
   }
 }
 .snap {
-  scroll-snap-align: start;
+  // scroll-snap-align: start;
 }
 @import './screens/home';
 @import './partials/navbar';

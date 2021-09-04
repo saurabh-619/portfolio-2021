@@ -1,4 +1,4 @@
-#section {
+.section {
   height: 100vh;
   width: 100%;
 
@@ -6,21 +6,27 @@
   align-items: center;
   justify-content: center;
 
-  & .center {
-    position: relative;
-  }
+  & .title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  & .right,
-  & .left {
-    position: absolute;
-    color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: $white45;
+    & .center {
+      position: relative;
+    }
+
+    & .right,
+    & .left {
+      position: absolute;
+      color: transparent;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: $white45;
+    }
   }
 }
 
 @media screen and (max-width: $lg) {
-  #section {
+  .section {
     padding: $padding-page;
 
     & .right,

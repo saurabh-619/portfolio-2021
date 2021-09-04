@@ -1,5 +1,6 @@
 // Images
 import sushantImg from '../../static/images/sushant.jpg';
+import mapImg from '../../static/images/map.png';
 
 // logos
 import logo0 from '../../static/images/sb-logos/logo-0.svg';
@@ -21,6 +22,7 @@ import avatarImg from '../../static/images/glass-ui/parts/avatar.jpg';
 
 export {
   sushantImg,
+  mapImg,
   logo0,
   logo1,
   logo2,

@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { BlogFilterProps, Filters } from '../../types';
 import { sortPostsWithDate, sortPostsWithId, sortPostsWithLikes } from '../../utills/common';
-import { bloggingData } from './data';
 
 const BlogFilter: React.FC<BlogFilterProps> = ({
   totalData,
@@ -35,19 +34,19 @@ const BlogFilter: React.FC<BlogFilterProps> = ({
       <div className="filters">
         <h3
           className={`font-main20-R ${currentFilter === Filters.ALL && 'selected'}`}
-          onClick={(e) => handleFilterClicked(Filters.ALL)}
+          onClick={() => handleFilterClicked(Filters.ALL)}
         >
           All
         </h3>
         <h3
           className={`font-main20-R ${currentFilter === Filters.MOST_LIKED && 'selected'}`}
-          onClick={(e) => handleFilterClicked(Filters.MOST_LIKED)}
+          onClick={() => handleFilterClicked(Filters.MOST_LIKED)}
         >
           Most Liked
         </h3>
         <h3
           className={`font-main20-R ${currentFilter === Filters.RECENT && 'selected'}`}
-          onClick={(e) => handleFilterClicked(Filters.RECENT)}
+          onClick={() => handleFilterClicked(Filters.RECENT)}
         >
           Recent
         </h3>
@@ -57,7 +56,7 @@ const BlogFilter: React.FC<BlogFilterProps> = ({
           <h3
             key={num}
             className={`page-number font-h430-B ${pageNumber === num && 'selected'}`}
-            onClick={(e) => handlePageClicked(num)}
+            onClick={() => handlePageClicked(num)}
           >
             {num}
           </h3>

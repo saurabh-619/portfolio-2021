@@ -1,6 +1,8 @@
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { BloggingSites, BlogType, TechnologiesEnum } from '../../types';
+import { fadeUpAnimation, imageAnimation, transitions } from '../../utills/animations';
 import { getIconFromTech } from '../../utills/common';
 
 const Blog: React.FC<BlogType> = ({
@@ -13,9 +15,47 @@ const Blog: React.FC<BlogType> = ({
   timeStamp,
   likes,
 }) => {
+  const { ref, inView } = useInView();
+  const blogController = useAnimation();
+  const imgController = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      imgController.start('animate');
+      blogController.start('animate');
+    }
+  }, [inView]);
+
+  const fadeUpAnimationNew = {
+    initial: {
+      y: 30,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        ...transitions,
+        duration: 0.8,
+      },
+    },
+  };
   return (
-    <div className="blog">
-      <img src={imgUrl} alt="Blog Img" className="blog-img" />
+    <motion.div
+      className="blog"
+      initial="initial"
+      variants={fadeUpAnimationNew}
+      animate={blogController}
+      ref={ref}
+    >
+      <motion.img
+        src={imgUrl}
+        alt="Blog Img"
+        className="blog-img"
+        variants={imageAnimation(1.15)}
+        initial="initial"
+        animate={imgController}
+      />
       <div className="content">
         <motion.a className="font-h430-B name" href={blogUrl} target="_blank">
           {name.length < 50 ? name : `${name.substring(0, 50)} ...`}
@@ -54,7 +94,7 @@ const Blog: React.FC<BlogType> = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

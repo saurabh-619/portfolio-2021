@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import { fadeUpAnimation, imageAnimation, transitions } from '../../utills/animations';
 import { sushantImg } from '../../utills/constants';
-
-const transitions = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
 const firstNameAnimation = {
   animate: {
@@ -29,22 +28,6 @@ const scrollDownAnimation = {
     y: -15,
     transition: { yoyo: Infinity, duration: 1.5 },
   },
-};
-
-const fadeUpAnimation = {
-  initial: {
-    y: 30,
-    opacity: 0,
-  },
-  animate: { y: 0, opacity: 1, transition: { ...transitions, delay: 2, duration: 2 } },
-};
-
-const imageAnimation = {
-  initial: {
-    scale: 0.9,
-    opacity: 0.8,
-  },
-  animate: { scale: 1, opacity: 1, transition: { duration: 3 } },
 };
 
 export const Home = () => {
@@ -111,11 +94,11 @@ export const Home = () => {
             </div>
             <motion.div
               className="font-intro24-R caption"
-              variants={fadeUpAnimation}
+              variants={fadeUpAnimation()}
               initial="initial"
               animate="animate"
             >
-              UI Designer and Software Developer{' '}
+              UI Designer and Software Developer
             </motion.div>
           </div>
           <motion.div
@@ -132,7 +115,7 @@ export const Home = () => {
           <motion.img
             src={sushantImg}
             alt="sushantImg"
-            variants={imageAnimation}
+            variants={imageAnimation()}
             initial="initial"
             animate="animate"
           />

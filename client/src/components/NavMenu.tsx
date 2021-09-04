@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import { transitions } from '../utills/animations';
 
-export const NavMenu = () => {
+export const NavMenu = ({ setNavClicked }: { setNavClicked: any }) => {
   const bgAnimation = {
     hidden: {
       y: '100%',
@@ -43,6 +44,15 @@ export const NavMenu = () => {
     },
   };
 
+  const whileHoverNavigation = {
+    scale: 1.1,
+    transition: { ...transitions, type: 'spring', duration: 0.2 },
+  };
+
+  const handleNavOptionClicked = () => {
+    setNavClicked((prev: any) => !prev);
+  };
+
   return (
     <motion.div
       className="navmenu"
@@ -52,22 +62,52 @@ export const NavMenu = () => {
       exit="exit"
     >
       <motion.ul variants={ulAnimation}>
-        <motion.li className="font-h160-B" variants={liItemAnimation}>
-          <a href={'#section-home'}>home</a>
+        <motion.li
+          className="font-h160-B"
+          variants={liItemAnimation}
+          whileHover={whileHoverNavigation}
+          onClick={handleNavOptionClicked}
+        >
+          <a href={'#home'}>home</a>
         </motion.li>
-        <motion.li className="font-h160-B" variants={liItemAnimation}>
+        <motion.li
+          className="font-h160-B"
+          variants={liItemAnimation}
+          whileHover={whileHoverNavigation}
+          onClick={handleNavOptionClicked}
+        >
           <a href={'#section-works'}>works</a>
         </motion.li>
-        <motion.li className="font-h160-B" variants={liItemAnimation}>
+        <motion.li
+          className="font-h160-B"
+          variants={liItemAnimation}
+          whileHover={whileHoverNavigation}
+          onClick={handleNavOptionClicked}
+        >
           <a href={'#section-blogs'}>blogs</a>
         </motion.li>
-        <motion.li className="font-h160-B" variants={liItemAnimation}>
+        <motion.li
+          className="font-h160-B"
+          variants={liItemAnimation}
+          whileHover={whileHoverNavigation}
+          onClick={handleNavOptionClicked}
+        >
           <a href={'#section-skills'}>skills</a>
         </motion.li>
-        <motion.li className="font-h160-B" variants={liItemAnimation}>
+        <motion.li
+          className="font-h160-B"
+          variants={liItemAnimation}
+          whileHover={whileHoverNavigation}
+          onClick={handleNavOptionClicked}
+        >
           <a href={'#section-about'}>about</a>
         </motion.li>
-        <motion.li className="font-h160-B" variants={liItemAnimation}>
+        <motion.li
+          className="font-h160-B"
+          variants={liItemAnimation}
+          whileHover={whileHoverNavigation}
+          onClick={handleNavOptionClicked}
+        >
           <a href={'#section-contact'}>contact</a>
         </motion.li>
       </motion.ul>

@@ -6,6 +6,9 @@ import { useState } from 'react';
 import BlogFilter from './BlogFilter';
 import { useScroll } from '../../utills/useScroll';
 import { heightOfOnePage } from '../../utills/constants';
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
+import { pageTitleAnimation, staggerWrapper, transitions } from '../../utills/animations';
 
 export const Blogs = () => {
   const [totalData, setTotalBlogs] = useState(bloggingData);
@@ -19,21 +22,65 @@ export const Blogs = () => {
     setShowBottomGradient(7 * heightOfOnePage < position && position < 11 * heightOfOnePage);
   }, [position]);
 
+  // Animations
+  const { ref, inView } = useInView();
+  const wrapperController = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      wrapperController.start('animate');
+    }
+  }, [inView]);
+
+  const fadeUpAnimationNew = {
+    initial: {
+      y: 30,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: { ...transitions, duration: 0.8 },
+    },
+  };
+
+  const blogWrapperAnimation = {
+    initial: {
+      y: 30,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: { ...transitions, duration: 0.8 },
+    },
+  };
+
   return (
-    <div id="blogs" className="container pb-2 snap top-heading-padding">
-      <h2 className="font-brand90-B">blogs</h2>
-      <BlogFilter
-        totalData={totalData}
-        setTotalBlogs={setTotalBlogs}
-        pageNumber={pageNumber}
-        setPageNumber={setPageNumber}
-      />
-      <div className="blogs-wrapper">
+    <motion.div
+      id="blogs"
+      className="container pb-2 snap top-heading-padding"
+      variants={staggerWrapper(0, 0.6)}
+      initial="initial"
+      animate={wrapperController}
+    >
+      <motion.h2 className="font-brand90-B" variants={pageTitleAnimation(undefined, 1)}>
+        blogs
+      </motion.h2>
+      <motion.div variants={fadeUpAnimationNew} ref={ref}>
+        <BlogFilter
+          totalData={totalData}
+          setTotalBlogs={setTotalBlogs}
+          pageNumber={pageNumber}
+          setPageNumber={setPageNumber}
+        />
+      </motion.div>
+      <motion.div className="blogs-wrapper" variants={blogWrapperAnimation}>
         {totalData.slice((pageNumber - 1) * 4, pageNumber * 4).map((blog: BlogType) => (
           <Blog key={blog.timeStamp} {...blog} />
         ))}
-      </div>
+      </motion.div>
       {showBottomGradient && <div className="linear-gradient"></div>}
-    </div>
+    </motion.div>
   );
 };
