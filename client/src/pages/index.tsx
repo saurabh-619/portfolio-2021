@@ -6,7 +6,7 @@ import { Navbar } from '../components';
 
 const Skelaton: React.FC = () => {
   const windowDoc = typeof window !== "undefined" ? window : null; 
-  const hash =  window?.location.hash;
+  const hash =  windowDoc?.location.hash;
 
   useEffect(() => {
     if (windowDoc && hash) {
