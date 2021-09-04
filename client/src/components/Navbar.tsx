@@ -24,7 +24,7 @@ export const Navbar = () => {
 
   return (
     <div className="navbar">
-      {showLogo ? <Logo size={50} /> : <div></div>}
+      {showLogo ? <Logo size={50} isNavClicked={isNavClicked} /> : <div></div>}
       {<Hamburger size={40} isNavClicked={isNavClicked} onClick={handleNavClicked} />}
       <AnimatePresence>{isNavClicked && <NavMenu setNavClicked={setNavClicked} />}</AnimatePresence>
     </div>

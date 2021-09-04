@@ -52,6 +52,7 @@ export enum Filters {
 export interface LogoProps {
   size?: number;
   varient?: LogoVarient;
+  isNavClicked: boolean;
 }
 export interface SectionProps {
   sectionTitle: string;

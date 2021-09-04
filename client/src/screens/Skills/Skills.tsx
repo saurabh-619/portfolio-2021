@@ -1,10 +1,11 @@
+import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { getIconFromTech } from '../../utills/common';
 import { skills } from '../../utills/constants';
 import { useWindowSize } from '../../utills/useWindowSize';
 
 export const Skills = () => {
-  const { width } = useWindowSize();
+  const {height, width } = useWindowSize();
   const [factors, setFactors] = useState({
     left: 400,
     top: 200,
@@ -52,15 +53,17 @@ export const Skills = () => {
   useEffect(() => {
     getFactors(width);
   }, [width]);
- 
 
+ 
+ 
+ 
   return (
-    <div id="skills" className="snap">
+    <div id="skills" className="snap"  >
       {skills?.map((skill: string, index) => (
         <div
           key={index}
           className="skill"
-          style={{
+           style={{
             left:
               factors?.left * (index % 4) +
               ((index / 4) % 2) * 80 +

@@ -64,7 +64,6 @@ export const Work: React.FC<WorkType> = ({
           variants={staggerWrapper()}
           initial="initial"
           animate={wrapperController}
-          ref={ref}
         >
           <motion.a
             className="name font-h160-B"
@@ -74,7 +73,7 @@ export const Work: React.FC<WorkType> = ({
           >
             {name}
           </motion.a>
-          <motion.h3 className="desc font-main20-R" variants={headingVarient}>
+          <motion.h3 className="desc font-main20-R" variants={headingVarient} ref={ref}>
             {desc}
           </motion.h3>
           <motion.div className="technologies" transition={staggerTransition()}>

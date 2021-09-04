@@ -59,7 +59,7 @@ export const Contact = () => {
                   className="social-icon"
                   href={`${index === 2 ? 'mailto:' : ''}${social[1]}`}
                   target="_blank"
-                  variants={fadeUpAnimationNew(0.25)}
+                  variants={fadeUpAnimationNew(0.2)}
                 >
                   <img src={social[0]} alt="social" />
                 </motion.a>
