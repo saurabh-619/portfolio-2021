@@ -5,7 +5,7 @@ import { Section } from './../screens/Section/Section';
 import { Navbar } from '../components';
 
 const Skelaton: React.FC = () => {
-  const windowDoc = window !== undefined ? window : null; 
+  const windowDoc = typeof window !== "undefined" ? window : null; 
   const hash =  window?.location.hash;
 
   useEffect(() => {
