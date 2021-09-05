@@ -11,6 +11,7 @@ import {
 } from '../../utills/animations';
 import { dot } from '../../utills/constants';
 import { useInView } from 'react-intersection-observer';
+import { ExternalLink } from 'react-feather';
 
 export const Work: React.FC<WorkType> = ({
   id,
@@ -72,6 +73,9 @@ export const Work: React.FC<WorkType> = ({
             variants={headingVarient}
           >
             {name}
+            <span className="external-link">
+              <ExternalLink size={20} />
+            </span>
           </motion.a>
           <motion.h3 className="desc font-main20-R" variants={headingVarient} ref={ref}>
             {desc}

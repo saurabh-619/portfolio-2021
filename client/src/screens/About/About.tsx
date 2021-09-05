@@ -119,7 +119,12 @@ export const About = () => {
                   </span>
                   <h3 className="font-main20-R">Pune, India</h3>
                 </motion.div>
-                <motion.a className="resume" href="" variants={fadeUpAnimation()}>
+                <motion.a
+                  className="resume"
+                  href="https://github.com/saurabh-619/images/raw/50bd31bc37cd55f3c988e7932bb3d847acae5851/CV/SaurabhBomble-Aug21.pdf"
+                  download="SaurabhBomble"
+                  variants={fadeUpAnimation()}
+                >
                   <h3 className="font-main20-B">resume</h3>
                   <span>
                     <ArrowDownCircle size="25" />

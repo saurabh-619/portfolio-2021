@@ -547,6 +547,8 @@
   #about {
     & .content-wrapper {
       & .right {
+        display: flex;
+        justify-content: center;
         & .card {
           height: 220px;
           width: 330px;

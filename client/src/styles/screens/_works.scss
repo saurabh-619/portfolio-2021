@@ -47,7 +47,11 @@
           @include transEasy;
 
           &:hover {
-            transform: scale(0.99);
+            transform: scale(0.9);
+          }
+
+          & .external-link {
+            visibility: hidden;
           }
         }
 
@@ -154,6 +158,11 @@
           & .name {
             font-size: 2rem;
             width: 80vw;
+
+            & .external-link {
+              margin-left: 1rem;
+              visibility: visible !important;
+            }
           }
 
           & .desc {
@@ -194,6 +203,10 @@
             font-size: 1.8rem;
             line-height: normal;
             width: 80vw;
+            & .external-link {
+              margin-left: 0.8rem;
+              visibility: visible !important;
+            }
           }
 
           & .desc {

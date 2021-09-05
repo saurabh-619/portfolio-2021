@@ -1,19 +1,27 @@
-import React, { useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 import '../styles/main.scss';
 import { About, Blogs, Contact, Home, Skills, Works } from '../screens';
 import { Section } from './../screens/Section/Section';
-import { Navbar } from '../components'; 
+import { Navbar } from '../components';   
 
 const Skelaton: React.FC = () => {
   const windowDoc = typeof window !== "undefined" ? window : null; 
-  const hash =  windowDoc?.location.hash;
-
+  const hash = windowDoc?.location.hash;
+  
+  const [loading, setLoading] = useState(true);
+ 
   useEffect(() => {
     if (windowDoc && hash) {
       windowDoc.location.href = hash;
-    } 
+    }
+    
   }, []);
-  return (
+
+  if (loading) {
+    return <h3>Loading....</h3>
+  }
+
+  return (  
     <div id="App">
       <Navbar />
       <Home />

@@ -1,8 +1,9 @@
-import { motion } from 'framer-motion';
+ 
 import React, { useEffect, useState } from 'react';
 import { getIconFromTech } from '../../utills/common';
 import { skills } from '../../utills/constants';
 import { useWindowSize } from '../../utills/useWindowSize';
+
 
 export const Skills = () => {
   const {height, width } = useWindowSize();
@@ -42,10 +43,15 @@ export const Skills = () => {
         left: widthOfScreen/4.5,
         top: widthOfScreen/3.2,
       });
+    }else if (405 < widthOfScreen && widthOfScreen <=550) {
+      return setFactors({
+        left: widthOfScreen/2.9,
+        top: widthOfScreen/2.85,
+      });  
     }else {
       return setFactors({
-        left: widthOfScreen/5.5,
-        top: widthOfScreen/3,
+        left: widthOfScreen/3,
+        top: widthOfScreen/2.6,
       }); 
     } 
   };
@@ -53,29 +59,59 @@ export const Skills = () => {
   useEffect(() => {
     getFactors(width);
   }, [width]);
+ 
 
+  const handleMouseOver = (e: any) => {
+    document.querySelectorAll('.skill').forEach((layer) => {
+      const speed = layer.getAttribute('data-speed');
+      const x = (width! - (e.clientX * speed)) / 200;
+      const y = (height! - (e.clientY * speed)) / 200;
+
+      layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    })
+  }
+  
+  const mobileAligns = (index:number) => { 
+    return {
+      left:
+        factors?.left * (index % 3) +
+          ((index / 3) % 2) * 20 +
+          20 +
+          20.56123 * (Math.random() - 0.5) * 2,
+      top:
+        factors?.top * Math.floor(index / 3) +
+        ((index / 3) % 2) *5 +
+        15 +
+        45.34 * (Math.random() - 0.5) * 1.59,
+    }
+  }
  
+  
+  const largeAligns = (index:number) => {
+    return {
+    left:
+      factors?.left * (index % 4) +
+      ((index / 4) % 2) * 80 +
+      30 +
+      53.56123 * (Math.random() - 0.5) * 2,
+    top:
+      factors?.top * Math.floor(index / 4) +
+      ((index / 4) % 2) * 10 +
+      30 +
+      23.3412312 * (Math.random() - 0.5) * 2,
+    }
+  }
  
- 
-  return (
-    
-    <div id="skills" className="snap"  >
+  return (   
+    <div id="skills" className="snap" onMouseMove={handleMouseOver} >
       {skills?.map((skill: string, index) => (
         <div
           key={index}
           className="skill"
-           style={{
-            left:
-              factors?.left * (index % 4) +
-              ((index / 4) % 2) * 80 +
-              30 +
-              53.56123 * (Math.random() - 0.5) * 2,
-            top:
-              factors?.top * Math.floor(index / 4) +
-              ((index / 4) % 2) * 10 +
-              30 +
-              23.3412312 * (Math.random() - 0.5) * 2,
-          }}
+          data-speed={Math.ceil((Math.random()-.5)*15)}
+           style={ 
+             width! > 850 ? largeAligns(index): mobileAligns(index)
+          }
         >
           <img src={getIconFromTech(skill)} alt="Skill" className="skill-img" />
         </div>
