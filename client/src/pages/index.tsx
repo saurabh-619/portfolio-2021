@@ -6,21 +6,13 @@ import { Navbar } from '../components';
 
 const Skelaton: React.FC = () => {
   const windowDoc = typeof window !== "undefined" ? window : null; 
-  const hash = windowDoc?.location.hash;
-  
-  const [loading, setLoading] = useState(true);
- 
+  const hash = windowDoc?.location.hash; 
   useEffect(() => {
     if (windowDoc && hash) {
       windowDoc.location.href = hash;
-    }
-    
+    } 
   }, []);
-
-  if (loading) {
-    return <h3>Loading....</h3>
-  }
-
+  
   return (  
     <div id="App">
       <Navbar />
