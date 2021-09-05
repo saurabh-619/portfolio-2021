@@ -1,5 +1,5 @@
 import { BlogType, LogoVarient } from '../types';
-import { iconMap, logo0, logo1, logo2, logo3, logo4 } from './constants';
+import { iconMap, logo0, logo1, logo2, logo5 } from './constants';
 
 export const getLogoSrc = (varient?: LogoVarient) => {
   switch (varient) {
@@ -10,7 +10,7 @@ export const getLogoSrc = (varient?: LogoVarient) => {
     case LogoVarient.tertiary:
       return logo2;
     default:
-      return logo4;
+      return logo5;
   }
 };
 

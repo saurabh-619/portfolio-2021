@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import '../styles/main.scss';
 import { About, Blogs, Contact, Home, Skills, Works } from '../screens';
 import { Section } from './../screens/Section/Section';
-import { Navbar } from '../components';
+import { Navbar } from '../components'; 
 
 const Skelaton: React.FC = () => {
   const windowDoc = typeof window !== "undefined" ? window : null; 
@@ -27,7 +27,7 @@ const Skelaton: React.FC = () => {
       <About />
       <Section sectionTitle="contact" />
       <Contact />
-    </div>
+    </div> 
   );
 };
 

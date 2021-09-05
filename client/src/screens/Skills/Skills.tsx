@@ -58,6 +58,7 @@ export const Skills = () => {
  
  
   return (
+    
     <div id="skills" className="snap"  >
       {skills?.map((skill: string, index) => (
         <div

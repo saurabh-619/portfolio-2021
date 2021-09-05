@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import React, { useEffect } from 'react';
 import { menuIcon, closeIcon } from '../utills/constants';
 
 interface HamProps {
@@ -9,6 +9,11 @@ interface HamProps {
 }
 
 export const Hamburger: React.FC<HamProps> = ({ size = 30, isNavClicked, onClick }) => {
+  const hamVariant = {
+    initial: { y: 20, opacity: 0 },
+    animate: { y: 0, opacity: 1, transition: { duration: 1 } },
+  };
+
   return (
     <>
       <motion.img
@@ -18,8 +23,9 @@ export const Hamburger: React.FC<HamProps> = ({ size = 30, isNavClicked, onClick
         height={size}
         width={size}
         onClick={onClick}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 1 } }}
+        variants={hamVariant}
+        initial="initial"
+        animate="animate"
       />
     </>
   );

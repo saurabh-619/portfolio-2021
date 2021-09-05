@@ -7,6 +7,11 @@ export const Logo: React.FC<LogoProps> = ({
   varient = LogoVarient.primary,
   isNavClicked,
 }) => {
+  const hamVariant = {
+    initial: { y: 20, opacity: 0 },
+    animate: { y: 0, opacity: 1, transition: { duration: 1 } },
+  };
+
   return (
     <>
       <motion.img
@@ -15,13 +20,9 @@ export const Logo: React.FC<LogoProps> = ({
         alt="sb"
         height={size}
         width={size}
-        initial={{
-          pathLength: 0,
-        }}
-        animate={{
-          pathLength: 1,
-          transition: { duration: 1 },
-        }}
+        variants={hamVariant}
+        initial="initial"
+        animate="animate"
       />
       {/* <motion.svg
         width="36"

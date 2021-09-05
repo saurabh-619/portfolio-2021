@@ -8,6 +8,7 @@ import logo1 from '../../static/images/sb-logos/logo-1.svg';
 import logo2 from '../../static/images/sb-logos/logo-2.svg';
 import logo3 from '../../static/images/sb-logos/logo-3.svg';
 import logo4 from '../../static/images/sb-logos/logo-4.svg';
+import logo5 from '../../static/images/sb-logos/logo-5.svg';
 
 // Conponents
 import menuIcon from '../../static/images/components/menu.svg';
@@ -28,6 +29,7 @@ export {
   logo2,
   logo3,
   logo4,
+  logo5,
   menuIcon,
   closeIcon,
   dot,
