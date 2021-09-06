@@ -5,7 +5,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: gilroy !important;
+  font-family: $gilroy !important;
   box-sizing: border-box;
   @include scrollBar;
 }
@@ -28,7 +28,7 @@ body {
 }
 
 #App {
-  font-family: gilroy !important;
+  font-family: $gilroy !important;
   background-color: $bg;
   color: $white;
   min-height: 100vh;
@@ -39,9 +39,12 @@ body {
     text-decoration: none;
   }
 }
+
 .snap {
   // scroll-snap-align: start;
 }
+
+@import './screens/loading';
 @import './screens/home';
 @import './partials/navbar';
 @import './screens/section';

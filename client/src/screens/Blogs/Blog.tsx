@@ -2,7 +2,7 @@ import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { BloggingSites, BlogType, TechnologiesEnum } from '../../types';
-import { fadeUpAnimation, imageAnimation, transitions } from '../../utills/animations';
+import { imageAnimation, transitions } from '../../utills/animations';
 import { getIconFromTech } from '../../utills/common';
 
 const Blog: React.FC<BlogType> = ({

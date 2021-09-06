@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { getIconFromTech } from '../../utills/common';
 import { skills } from '../../utills/constants';
 import { useWindowSize } from '../../utills/useWindowSize';
-
+ 
 
 export const Skills = () => {
   const {height, width } = useWindowSize();
@@ -104,7 +104,7 @@ export const Skills = () => {
  
   return (   
     <div id="skills" className="snap" onMouseMove={handleMouseOver} >
-      {skills?.map((skill: string, index) => (
+      {skills?.map((skill: string, index) => ( 
         <div
           key={index}
           className="skill"
@@ -114,7 +114,7 @@ export const Skills = () => {
           }
         >
           <img src={getIconFromTech(skill)} alt="Skill" className="skill-img" />
-        </div>
+          </div> 
       ))}
     </div>
   );

@@ -5,7 +5,7 @@ import { Hamburger } from './Hamburger';
 import { Logo } from './Logo';
 import { NavMenu } from './NavMenu';
 
-export const Navbar = () => {
+export const Navbar = ({}) => {
   const [isNavClicked, setNavClicked] = useState<boolean>(false);
   const [showLogo, setShowLogo] = useState<boolean>(true);
 
