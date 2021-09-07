@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef } from 'react';
+import React, {useState, useEffect} from 'react';
 import '../styles/main.scss';
 import { About, Blogs, Contact, Home, Skills, Works ,Section, Loading} from '../screens'; 
 import {Head, Navbar } from '../components';     
