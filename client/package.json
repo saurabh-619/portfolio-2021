@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "framer-motion": "4.1.17",
-    "gatsby": "2.15.12",
+    "gatsby": "3.13.0",
     "gatsby-cli": "3.13.0",
     "gatsby-plugin-google-analytics": "3.13.0",
     "gatsby-plugin-manifest": "3.13.0",
