@@ -15,7 +15,7 @@ html {
   // scroll-snap-points-y: repeat(100vh);
   // scroll-snap-type: y mandatory;
   // scroll-snap-stop: normal;
-  // scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -44,7 +44,16 @@ body {
   // scroll-snap-align: start;
 }
 
+.mouse {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: $white;
+}
+
 @import './screens/loading';
+@import './screens/notfound';
 @import './screens/home';
 @import './partials/navbar';
 @import './screens/section';

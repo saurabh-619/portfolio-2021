@@ -1,47 +1,50 @@
-import React, {useState, useEffect } from 'react';
+import React, {useState, useEffect, useRef } from 'react';
 import '../styles/main.scss';
 import { About, Blogs, Contact, Home, Skills, Works ,Section, Loading} from '../screens'; 
-import { Navbar } from '../components';     
+import {Head, Navbar } from '../components';     
 import { AnimatePresence } from 'framer-motion';
+
 
 const Skelaton: React.FC = () => {
   const windowDoc = typeof window !== "undefined" ? window : null; 
   const hash = windowDoc?.location.hash;
   
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setLoading(false);
       if (windowDoc && hash) {
         windowDoc.location.href = hash;
       }
-    }, 4500);
+    }, 4500); 
+    () => clearTimeout(timeout);    
   }, []);  
-  
- 
-
-  return (  
-    <AnimatePresence>
-      {loading ? <Loading />
-        : (
-          <div id="App">
-            <Navbar />
-            <Home />
-            <Section sectionTitle="works" />
-            <Works />
-            <Section sectionTitle="blogs" />
-            <Blogs />
-            <Section sectionTitle="skills" />
-            <Skills />
-            <Section sectionTitle="about" />
-            <About />
-            <Section sectionTitle="contact" />
-            <Contact />
-          </div>
-        )
-      }
-    </AnimatePresence>
+    
+  return (
+    <>
+      <Head/>
+      <AnimatePresence>
+        {loading ? <Loading />
+          : (
+            <div id="App" > 
+              <Navbar />
+              <Home />
+              <Section sectionTitle="works" />
+              <Works />
+              <Section sectionTitle="blogs" />
+              <Blogs />
+              <Section sectionTitle="skills" />
+              <Skills />
+              <Section sectionTitle="about" />
+              <About />
+              <Section sectionTitle="contact" />
+              <Contact />
+            </div>
+          )
+        }
+      </AnimatePresence>
+    </>
   );
 };
 

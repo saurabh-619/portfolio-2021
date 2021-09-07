@@ -47,7 +47,8 @@
           @include transEasy;
 
           &:hover {
-            transform: scale(0.9);
+            color: $primary;
+            transform: translateY(-5px) scale(1.02) !important;
           }
 
           & .external-link {
@@ -199,13 +200,23 @@
           bottom: 3vw;
           justify-content: center;
           padding: 0 1.5rem;
-          & .name {
+          & a.name {
             font-size: 1.8rem;
             line-height: normal;
             width: 80vw;
+
+            &:hover {
+              transform: translateY(-3px) scale(1.02) !important;
+            }
+
             & .external-link {
-              margin-left: 0.8rem;
+              margin-left: 0.5rem;
               visibility: visible !important;
+
+              & svg {
+                height: 11px !important;
+                width: 11px !important;
+              }
             }
           }
 

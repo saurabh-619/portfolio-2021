@@ -1,6 +1,6 @@
 .section {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 
   display: flex;
   align-items: center;
@@ -43,4 +43,17 @@
 }
 
 @media screen and (max-width: $sm) {
+  .section {
+    width: 100vw !important;
+    & .title-wrapper {
+      position: static !important;
+      overflow: hidden !important;
+
+      & .right,
+      & .left,
+      & .center {
+        overflow-x: hidden !important;
+      }
+    }
+  }
 }

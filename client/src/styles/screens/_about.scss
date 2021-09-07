@@ -144,8 +144,8 @@
               @include transEasy;
 
               &:hover {
-                transform: scale(0.99);
-                color: $white85;
+                color: $primary !important;
+                transform: translateY(-3px) scale(1.02) !important;
               }
             }
           }
@@ -601,6 +601,7 @@
               & .resume {
                 display: flex;
                 align-items: center;
+
                 & span {
                   margin-left: 0.5rem;
                   & svg {

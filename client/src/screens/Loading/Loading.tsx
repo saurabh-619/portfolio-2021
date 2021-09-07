@@ -1,6 +1,7 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { staggerWrapper, transitions } from '../../utills/animations';
+import { motion } from 'framer-motion';
+import { transitions } from '../../utills/animations';
+import { sushantImg } from '../../utills/constants';
 
 export const Loading = () => {
   const loadingVariant = {
@@ -79,6 +80,7 @@ export const Loading = () => {
 
   return (
     <motion.div id="loading" variants={wrapperVariant} initial="initial" animate="animate">
+      <img src={sushantImg} alt="sushantImg" style={{ visibility: 'hidden' }} />
       <motion.div className="color first" variants={loadingVariant}></motion.div>
       <motion.div className="color second" variants={loadingVariant}></motion.div>
       <motion.div className="color third" variants={loadingVariant}></motion.div>

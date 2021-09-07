@@ -4,7 +4,6 @@ import { TechnologiesEnum, WorkType } from '../../types';
 import {
   fadeUpAnimation,
   headingAnimation,
-  imageAnimation,
   staggerTransition,
   staggerWrapper,
   workImageAnimation,

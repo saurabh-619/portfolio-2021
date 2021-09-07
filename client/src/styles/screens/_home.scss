@@ -37,6 +37,14 @@
       right: 3rem;
       left: auto;
       bottom: 0;
+
+      & a {
+        @include transEasy;
+        &:hover {
+          color: $primary;
+          transform: translateX(5px) scale(1.1);
+        }
+      }
     }
 
     & .left {

@@ -6,3 +6,4 @@ export * from './Skills/Skills';
 export * from './About/About';
 export * from './Contact/Contact';
 export * from './Loading/Loading';
+export * from './NotFound/NotFound';
