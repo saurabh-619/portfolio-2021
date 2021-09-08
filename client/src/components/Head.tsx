@@ -38,7 +38,7 @@ export const Head = () => {
   };
 
   return (
-    <Helmet title={seo.title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
+    <Helmet title={seo.title} defaultTitle={seo.title} titleTemplate={`%s | "Software Developer"`}>
       <html lang="en" />
 
       <meta name="description" content={seo.description} />

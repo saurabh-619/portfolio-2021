@@ -1,19 +1,16 @@
+@font-face {
+  font-family: 'ailerons';
+  src: url('/fonts/ailerons/ailerons-webfont.woff2') format('woff2'),
+    url('/fonts/ailerons/ailerons-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 // @font-face {
 //   font-family: 'ailerons';
 //   src: local('ailerons') url('/fonts/ailerons-typeface-webfont.woff2') format('woff2'),
 //     local('ailerons'), url('/fonts/ailerons-typeface-webfont.woff') format('woff');
 // }
-
-@font-face {
-  font-family: 'ailerons';
-  src: url('/fonts/ailerons/Ailerons-Regular.eot');
-  src: url('/fonts/ailerons/Ailerons-Regular.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/ailerons/Ailerons-Regular.woff2') format('woff2'),
-    url('/fonts/ailerons/Ailerons-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face {
   font-family: 'gilroy';
