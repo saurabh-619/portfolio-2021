@@ -57,4 +57,15 @@ export const bloggingData: BlogType[] = [
     "1632537720000",
     6
   ),
+  new Blog(
+    3,
+    "Web design inspirations - portfolio websites",
+    "Portfolio websites are the best way to boast about your front-end skills. A portfolio website is nothing less than a resume for a developer. All of these listed websites are portfolio sites of wonderful designers and developers.",
+    "https://cdn.hashnode.com/res/hashnode/image/upload/v1632853544138/_MiWyF7jf.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress",
+    "https://saurabhbomble.hashnode.dev/web-design-inspirations-portfolio-websites",
+    [BloggingSites.hashnode],
+    [TechnologiesEnum.nextjs],
+    "1632940740000",
+    6
+  ),
 ]
