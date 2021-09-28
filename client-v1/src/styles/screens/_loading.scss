@@ -1,0 +1,138 @@
+#loading {
+  height: 100vh !important;
+  width: 100vw;
+  position: relative;
+  z-index: 100000000;
+  overflow: hidden !important;
+
+  & .color {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.first {
+      background-color: $primary;
+      z-index: 6;
+
+      & .loading-text {
+        font-family: $ailerons !important;
+        opacity: 0;
+      }
+    }
+    &.second {
+      background-color: $sbcart-brand;
+      z-index: 5;
+    }
+    &.third {
+      background-color: $homie-brand;
+      z-index: 4;
+    }
+    &.fourth {
+      background-color: $secondary;
+      z-index: 3;
+    }
+    &.curtain {
+      background-color: $neu-bg;
+      z-index: 1;
+    }
+  }
+
+  & .logo {
+    background: $neu-bg;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .logo-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+      width: 300px;
+
+      & .logo-border {
+        height: 100%;
+        width: 100%;
+        stroke-width: 0.3rem;
+
+        & circle {
+          stroke: $white;
+        }
+      }
+      & .logo-s {
+        position: absolute;
+        stroke-width: 0.2rem;
+        height: 130px;
+        width: 130px;
+
+        & path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  #loading {
+    & .logo {
+      background: $neu-bg;
+
+      & .logo-wrapper {
+        height: 220px;
+        width: 220px;
+
+        & .logo-s {
+          height: 100px;
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  #loading {
+    & .logo {
+      background: $neu-bg;
+
+      & .logo-wrapper {
+        height: 180px;
+        width: 180px;
+
+        & .logo-s {
+          height: 85px;
+          width: 85px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  #loading {
+    & .logo {
+      background: $neu-bg;
+
+      & .logo-wrapper {
+        height: 140px;
+        width: 140px;
+
+        & .logo-s {
+          height: 65px;
+          width: 65px;
+        }
+      }
+    }
+  }
+}

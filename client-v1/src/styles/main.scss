@@ -1,0 +1,64 @@
+@import './partials/constants';
+@import './partials/mixins';
+@import './partials/common';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $gilroy !important;
+  box-sizing: border-box;
+  @include scrollBar;
+}
+
+html {
+  // scroll-snap-type: y mandatory;
+  // scroll-snap-points-y: repeat(100vh);
+  // scroll-snap-type: y mandatory;
+  // scroll-snap-stop: normal;
+  scroll-behavior: smooth !important;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+#App {
+  font-family: $gilroy !important;
+  background-color: $bg;
+  color: $white;
+  min-height: 100vh;
+
+  @include textSelection;
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+.snap {
+  // scroll-snap-align: start;
+}
+
+.mouse {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: $white;
+}
+
+@import './screens/notfound';
+@import './screens/loading';
+@import './screens/home';
+@import './partials/navbar';
+@import './screens/section';
+@import './screens/works';
+@import './screens/blogs';
+@import './screens/skills';
+@import './screens/about';
+@import './screens/contact';

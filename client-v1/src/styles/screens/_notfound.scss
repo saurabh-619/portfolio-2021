@@ -1,0 +1,95 @@
+#notfound {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: $bg;
+
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .name-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & .name {
+        color: $white;
+        font-size: 15rem;
+      }
+    }
+
+    & .main-text {
+      margin-top: 7rem;
+      color: $white85;
+      font-size: 2rem;
+    }
+
+    & .button-wrapper {
+      margin-top: 2rem;
+      & .button {
+        padding: 0.8rem 1.4rem;
+        border-radius: 6px;
+
+        background-color: $primary;
+        text-decoration: none;
+        color: $white;
+
+        &:hover {
+          transform: scale(0.99);
+          background-color: rgba($color: $primary, $alpha: 0.85);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  #notfound {
+    & .wrapper {
+      & .name-wrapper {
+        & .name {
+          font-size: 12rem;
+        }
+      }
+
+      & .main-text {
+        margin-top: 6rem;
+      }
+
+      & .button-wrapper {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  #notfound {
+    & .wrapper {
+      & .name-wrapper {
+        & .name {
+          font-size: 9rem;
+        }
+      }
+
+      & .main-text {
+        margin-top: 5rem;
+      }
+
+      & .button-wrapper {
+        margin-top: 2rem;
+        & .button {
+          padding: 0.8rem 1.4rem;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}

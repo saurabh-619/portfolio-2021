@@ -1,0 +1,242 @@
+#home {
+  padding: $padding-page;
+  height: 100vh;
+
+  & .wrapper {
+    display: flex;
+
+    & .scroll1,
+    & .scroll2 {
+      margin-top: 3rem;
+      width: 20px;
+
+      position: absolute;
+      left: 3rem;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      & h4,
+      & a {
+        color: $white60;
+        writing-mode: vertical-rl;
+        text-decoration: none;
+      }
+
+      .down-border {
+        margin-top: 1rem;
+        width: 2px;
+        height: 80px;
+        background-color: $white60;
+      }
+    }
+    & .scroll2 {
+      position: absolute;
+      right: 3rem;
+      left: auto;
+      bottom: 0;
+
+      & a {
+        @include transEasy;
+        &:hover {
+          color: $primary;
+          transform: translateX(5px) scale(1.1);
+        }
+      }
+    }
+
+    & .left {
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & .content {
+        margin-bottom: 2rem;
+        padding: 2rem 0 2rem 5rem;
+
+        & .name-wrappper {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+
+          align-items: flex-start;
+
+          & .name-wrappper-top,
+          & .name-wrappper-bottom {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+        }
+        & .caption {
+          color: $white60;
+          margin-top: 2rem;
+          padding-left: 1rem;
+        }
+      }
+    }
+
+    & .right {
+      margin-left: auto;
+      margin-right: 2rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // new
+      min-height: 85vh;
+
+      img {
+        height: 90%;
+        object-fit: cover;
+        // width: 500px;
+        // new
+        width: 600px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  #home {
+  }
+}
+
+@media screen and (max-width: $md) {
+  #home {
+    & .wrapper {
+      height: 100%;
+
+      & .scroll1,
+      & .scroll2 {
+        & h4,
+        & a {
+          font-size: 0.75rem;
+          letter-spacing: 1px;
+        }
+      }
+
+      & .left {
+        & .content {
+          & .name {
+            line-height: 1.5;
+          }
+          & .caption {
+            margin-top: 1.5rem;
+            padding-left: 0.6rem;
+          }
+        }
+      }
+
+      & .right {
+        img {
+          min-height: 0;
+          height: 65vh;
+          object-fit: cover;
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  #home {
+    & .wrapper {
+      & .right {
+        img {
+          min-height: 0;
+          height: 55vh;
+          object-fit: cover;
+          width: 40vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #home {
+    padding: 2rem 0;
+
+    & .wrapper {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      & .scroll1,
+      & .scroll2 {
+        margin-top: 3rem;
+        width: 20px;
+        left: 0.5rem;
+
+        & h4,
+        & a {
+          color: $white45;
+          font-size: 0.6rem;
+        }
+
+        .down-border {
+          width: 1.5px;
+          height: 40px;
+        }
+      }
+      & .scroll2 {
+        right: 0.5rem;
+        left: auto;
+      }
+
+      & .left {
+        order: 2;
+        width: 100%;
+        & .content {
+          margin-bottom: 0rem;
+          padding: 2rem 0;
+
+          & .name-wrappper {
+            flex-direction: row;
+            // justify-content: space-between;
+            align-items: center;
+
+            & .name-wrappper-top,
+            & .name-wrappper-bottom {
+              margin: 0 0.5rem;
+              align-items: center;
+            }
+          }
+          & br {
+            display: none;
+          }
+          & .name {
+            font-size: 2.3rem;
+          }
+
+          & .caption {
+            margin-top: 0.5rem;
+            text-align: center;
+            padding-left: 0.5rem;
+            font-size: 1rem;
+          }
+        }
+      }
+
+      & .right {
+        order: 1;
+        margin-left: 0;
+        margin-right: 0rem;
+        min-height: 55vh;
+
+        img {
+          min-height: 0;
+          height: 45vh;
+          object-fit: cover;
+          width: 300px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// Constants
+@mixin textSelection {
+  ::selection {
+    color: $primary;
+  }
+}
+
+@mixin scrollBar {
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $bg;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $grey;
+    border-radius: 3px;
+  }
+}
+@mixin transEasy($time: 1s) {
+  transition: all $time cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@mixin setFont($ff: $gilroy, $fw: bold, $fs: 160px, $lh: 198px) {
+  font-family: $ff !important;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  font-style: normal;
+}
+
+@mixin gradFont($grad: $sb-brand) {
+  background: $grad;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

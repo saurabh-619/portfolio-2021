@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { fadeUpAnimation, imageAnimation, transitions } from '../../utills/animations';
-import { sushantImg } from '../../utills/constants';
+import { sushantImg, saurabhImg } from '../../utills/constants';
 
 const firstNameAnimation = {
   animate: {
@@ -113,8 +113,8 @@ export const Home = () => {
         </div>
         <div className="right">
           <motion.img
-            src={sushantImg}
-            alt="sushantImg"
+            src={saurabhImg}
+            alt="saurabhImg"
             variants={imageAnimation()}
             initial="initial"
             animate="animate"

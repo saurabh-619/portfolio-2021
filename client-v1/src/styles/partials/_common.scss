@@ -1,0 +1,277 @@
+.container {
+  padding: 0 3rem;
+}
+
+.top-heading-padding {
+  padding-top: 15vh;
+}
+
+.pill {
+  border-radius: 10000;
+}
+
+.py {
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+}
+
+.px {
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+}
+
+.pb {
+  &-2 {
+    padding-bottom: 2rem;
+  }
+  &-3 {
+    padding-bottom: 3rem;
+  }
+}
+
+.font-glass-name {
+  @include setFont($ff: $ailerons, $fw: 400, $fs: 30px, $lh: 36px);
+}
+
+.font-contact-tags {
+  @include setFont($ff: $ailerons, $fw: 400, $fs: 20px, $lh: 24px);
+}
+
+.font-sbbrand {
+  @include setFont($ff: $ailerons, $fw: 400, $fs: 120px, $lh: 144px);
+}
+
+.font-brand160-B {
+  @include setFont($fw: $bold, $fs: 160px, $lh: 198px);
+}
+
+.font-brand120-B {
+  @include setFont($fw: $bold, $fs: 120px, $lh: 149px);
+}
+
+.font-brand90-B {
+  @include setFont($fw: $bold, $fs: 90px, $lh: 111px);
+}
+
+.font-h160-B {
+  @include setFont($fw: $bold, $fs: 60px, $lh: 74px);
+}
+
+.font-section160-B {
+  @include setFont($fw: $bold, $fs: 160px, $lh: 198px);
+}
+
+.font-h250-B {
+  @include setFont($fw: $bold, $fs: 50px, $lh: 62px);
+}
+
+.font-h340-B {
+  @include setFont($fw: $bold, $fs: 40px, $lh: 50px);
+}
+
+.font-h430-B {
+  @include setFont($fw: $bold, $fs: 30px, $lh: 37px);
+}
+
+.font-h430-M {
+  @include setFont($ff: $gilroy-md, $fw: $med, $fs: 30px, $lh: 36px);
+}
+
+.font-h430-R {
+  @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 30px, $lh: 36px);
+}
+
+.font-intro24-B {
+  @include setFont($fw: $bold, $fs: 24px, $lh: 29px);
+}
+
+.font-intro24-M {
+  @include setFont($ff: $gilroy-md, $fw: $med, $fs: 24px, $lh: 29px);
+}
+
+.font-intro24-R {
+  @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 24px, $lh: 29px);
+}
+
+.font-main20-R {
+  @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 20px, $lh: 24px);
+}
+
+.font-main20-B {
+  @include setFont($fw: $bold, $fs: 20px, $lh: 25px);
+}
+
+.font-medium17-M {
+  @include setFont($ff: $gilroy-md, $fw: $med, $fs: 17px, $lh: 21px);
+}
+
+.font-medium17-R {
+  @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 17px, $lh: 21px);
+}
+
+.font-caption15-M {
+  @include setFont($ff: $gilroy-md, $fw: $med, $fs: 15px, $lh: 18px);
+}
+
+.font-caption15-R {
+  @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 15px, $lh: 18px);
+}
+
+.font-caption13-M {
+  @include setFont($ff: $gilroy-md, $fw: $med, $fs: 13px, $lh: 16px);
+}
+
+.font-caption13-R {
+  @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 13px, $lh: 16px);
+}
+
+// Media Queries
+@media screen and (max-width: $lg) {
+  .font-brand90-B {
+    @include setFont($fw: $bold, $fs: 5rem, $lh: 111px);
+  }
+  .font-h430-B {
+    @include setFont($fw: $bold, $fs: 1.5rem, $lh: 37px);
+  }
+  .font-main20-R {
+    @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 1.1rem, $lh: 29px);
+  }
+  .font-medium17-R {
+    @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 0.9rem, $lh: 21px);
+  }
+
+  .font-intro24-B {
+    @include setFont($fw: $bold, $fs: 22px, $lh: 29px);
+  }
+
+  .font-section160-B {
+    @include setFont($fw: $bold, $fs: 140px, $lh: 198px);
+  }
+
+  .font-medium17-M {
+    @include setFont($ff: $gilroy-md, $fw: $med, $fs: 16px, $lh: 21px);
+  }
+
+  .font-h430-R {
+    @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 25px, $lh: 36px);
+  }
+}
+
+@media screen and (max-width: $md) {
+  .top-heading-padding {
+    padding-top: 13vh;
+  }
+
+  .font-sbbrand {
+    @include setFont($ff: $ailerons, $fw: 400, $fs: 5rem, $lh: 144px);
+  }
+
+  .font-brand90-B {
+    @include setFont($fw: $bold, $fs: 3.8rem, $lh: 111px);
+  }
+
+  .font-h160-B {
+    @include setFont($fw: $bold, $fs: 55px, $lh: 74px);
+  }
+
+  .font-section160-B {
+    @include setFont($fw: $bold, $fs: 110px, $lh: 198px);
+  }
+
+  .font-glass-name {
+    @include setFont($ff: $ailerons, $fw: 400, $fs: 22px, $lh: 36px);
+  }
+
+  .font-intro24-R {
+    @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 1.3rem, $lh: 29px);
+  }
+
+  .font-main20-B {
+    @include setFont($fw: $bold, $fs: 17px, $lh: 25px);
+  }
+
+  .font-main20-R {
+    @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 17px, $lh: 29px);
+  }
+
+  .font-medium17-M {
+    @include setFont($ff: $gilroy-md, $fw: $med, $fs: 14px, $lh: 21px);
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .top-heading-padding {
+    padding-top: 10vh;
+  }
+
+  .font-sbbrand {
+    @include setFont($ff: $ailerons, $fw: 400, $fs: 3.5rem, $lh: 100px);
+  }
+
+  .font-brand90-B {
+    @include setFont($fw: $bold, $fs: 3.5rem, $lh: 111px);
+  }
+
+  .font-h160-B {
+    @include setFont($fw: $bold, $fs: 46px, $lh: 74px);
+  }
+
+  .font-section160-B {
+    @include setFont($fw: $bold, $fs: 90px, $lh: 198px);
+  }
+
+  .font-h430-R {
+    @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 16px, $lh: 30px);
+  }
+
+  .font-intro24-R {
+    @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 1.1rem, $lh: 29px);
+  }
+
+  .font-main20-R {
+    @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 0.75rem, $lh: 29px);
+  }
+
+  .font-main20-R {
+    @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 1.1rem, $lh: 29px);
+  }
+
+  .font-caption15-R {
+    @include setFont($ff: $gilroy-reg, $fw: $reg, $fs: 1px, $lh: 18px);
+  }
+
+  .font-caption13-M {
+    @include setFont($ff: $gilroy-md, $fw: $med, $fs: 11px, $lh: 16px);
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  .top-heading-padding {
+    padding-top: 10vh;
+  }
+  .font-brand90-B {
+    @include setFont($fw: $bold, $fs: 3rem, $lh: 111px);
+  }
+  .font-section160-B {
+    @include setFont($fw: $bold, $fs: 60px, $lh: 198px);
+  }
+
+  .font-h160-B {
+    @include setFont($fw: $bold, $fs: 40px, $lh: 74px);
+  }
+
+  .font-medium17-M {
+    @include setFont($ff: $gilroy-md, $fw: $med, $fs: 12px, $lh: 25px);
+  }
+}
