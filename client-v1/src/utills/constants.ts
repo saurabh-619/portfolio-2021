@@ -20,7 +20,7 @@ import dot from "../../static/images/components/dot.svg"
 import glassSvg from "../../static/images/glass-ui/parts/glass.svg"
 import glassRedBallSvg from "../../static/images/glass-ui/parts/red-ball.svg"
 import glassGreenBallSvg from "../../static/images/glass-ui/parts/green-ball.svg"
-import avatarImg from "../../static/images/glass-ui/parts/avatar.jpg"
+import avatarImg from "../../static/images/saurabh-avatar.png"
 
 export {
   sushantImg,

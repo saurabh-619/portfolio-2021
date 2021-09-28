@@ -1,28 +1,32 @@
-import React, { useEffect } from 'react';
-import { avatarImg, glassGreenBallSvg, glassRedBallSvg } from '../../utills/constants';
+import React, { useEffect } from "react"
+import {
+  avatarImg,
+  glassGreenBallSvg,
+  glassRedBallSvg,
+} from "../../utills/constants"
 
-import { ArrowDownCircle, MapPin } from 'react-feather';
-import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
+import { ArrowDownCircle, MapPin } from "react-feather"
+import { useInView } from "react-intersection-observer"
+import { motion, useAnimation } from "framer-motion"
 import {
   pageTitleAnimation,
   staggerTransition,
   staggerWrapper,
   transitions,
-} from '../../utills/animations';
+} from "../../utills/animations"
 
 export const About = () => {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView()
 
-  const wrapperController = useAnimation();
-  const cardWrapper = useAnimation();
+  const wrapperController = useAnimation()
+  const cardWrapper = useAnimation()
 
   useEffect(() => {
     if (inView) {
-      wrapperController.start('animate');
-      cardWrapper.start('animate');
+      wrapperController.start("animate")
+      cardWrapper.start("animate")
     }
-  }, [inView]);
+  }, [inView])
 
   const fadeUpAnimation = (duration = 0.8) => ({
     initial: {
@@ -34,7 +38,7 @@ export const About = () => {
       opacity: 1,
       transition: { ...transitions, duration },
     },
-  });
+  })
 
   const paraTagAnimation = {
     initial: {
@@ -46,7 +50,7 @@ export const About = () => {
       opacity: 1,
       transition: { ...transitions, duration: 0.8 },
     },
-  };
+  }
 
   return (
     <motion.div
@@ -58,31 +62,53 @@ export const About = () => {
       ref={ref}
     >
       <div className="green-blurred-ball"></div>
-      <motion.h2 className="font-brand90-B" variants={pageTitleAnimation(undefined, 1)}>
+      <motion.h2
+        className="font-brand90-B"
+        variants={pageTitleAnimation(undefined, 1)}
+      >
         whoami
       </motion.h2>
       <motion.div className="content-wrapper">
         <motion.div className="left" transition={staggerTransition(0.4)}>
-          <motion.h6 className="font-contact-tags tags" variants={paraTagAnimation}>
-            {'<p>'}
+          <motion.h6
+            className="font-contact-tags tags"
+            variants={paraTagAnimation}
+          >
+            {"<p>"}
           </motion.h6>
-          <motion.div className="content" variants={{}} transition={staggerTransition(0.3)}>
+          <motion.div
+            className="content"
+            variants={{}}
+            transition={staggerTransition(0.3)}
+          >
             <motion.p className="font-medium17-R" variants={fadeUpAnimation()}>
-              Hi, <span className="title font-intro24-B"> I'M SAURABH BOMBLE</span>
+              Hi,{" "}
+              <span className="title font-intro24-B"> I'M SAURABH BOMBLE</span>
             </motion.p>
-            <motion.p className="main-text font-medium17-M" variants={fadeUpAnimation()}>
-              Software designer and developer based in Pune, India. I am currently in my final year
-              of computer engineering and have a strong interest in UI design, animations, and
-              software development.
+            <motion.p
+              className="main-text font-medium17-M"
+              variants={fadeUpAnimation()}
+            >
+              Software designer and developer based in Pune, India. I am
+              currently in my final year of computer engineering and have a
+              strong interest in UI design, animations, and software
+              development.
             </motion.p>
-            <motion.p className="main-text font-medium17-M" variants={fadeUpAnimation()}>
-              I began learning coding back in 2019 with web development and have enjoyed working on
-              both frontend and backend parts since then. Currently, I'm concentrating on the
-              performance, scalability, and UI/UX aspects of apps.
+            <motion.p
+              className="main-text font-medium17-M"
+              variants={fadeUpAnimation()}
+            >
+              I began learning coding back in 2019 with web development and have
+              enjoyed working on both frontend and backend parts since then.
+              Currently, I'm concentrating on the performance, scalability, and
+              UI/UX aspects of apps.
             </motion.p>
           </motion.div>
-          <motion.h6 className="font-contact-tags tags" variants={paraTagAnimation}>
-            {'</p>'}
+          <motion.h6
+            className="font-contact-tags tags"
+            variants={paraTagAnimation}
+          >
+            {"</p>"}
           </motion.h6>
         </motion.div>
         <motion.div
@@ -99,10 +125,16 @@ export const About = () => {
                   variants={{}}
                   transition={{ delayChildren: 1.5, staggerChildren: 0.7 }}
                 >
-                  <motion.h3 className="font-glass-name" variants={fadeUpAnimation()}>
+                  <motion.h3
+                    className="font-glass-name"
+                    variants={fadeUpAnimation()}
+                  >
                     SAURABH ANAND BOMBLE
                   </motion.h3>
-                  <motion.h4 className="font-medium17-R" variants={fadeUpAnimation()}>
+                  <motion.h4
+                    className="font-medium17-R"
+                    variants={fadeUpAnimation()}
+                  >
                     UI/UX designer & Software developer
                   </motion.h4>
                 </motion.div>
@@ -140,5 +172,5 @@ export const About = () => {
       </motion.div>
       <div className="red-blurred-ball"></div>
     </motion.div>
-  );
-};
+  )
+}
