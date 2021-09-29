@@ -1,6 +1,6 @@
-@import './partials/constants';
-@import './partials/mixins';
-@import './partials/common';
+@import "./partials/constants";
+@import "./partials/mixins";
+@import "./partials/common";
 
 * {
   margin: 0;
@@ -11,20 +11,26 @@
 }
 
 html {
-  // scroll-snap-type: y mandatory;
-  // scroll-snap-points-y: repeat(100vh);
-  // scroll-snap-type: y mandatory;
-  // scroll-snap-stop: normal;
-  scroll-behavior: smooth !important;
+  scroll-snap-type: y mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-behavior: smooth !important ;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden !important;
 }
 
 body {
+  height: 100vh !important;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth !important;
+  overflow-y: scroll;
+
   overflow-x: hidden !important;
+}
+
+.snap {
+  scroll-snap-align: start !important;
 }
 
 #App {
@@ -40,9 +46,18 @@ body {
   }
 }
 
-.snap {
-  // scroll-snap-align: start;
-}
+// .parent-snap {
+//   scroll-snap-type: y mandatory;
+//   scroll-snap-points-y: repeat(100vh);
+
+//   overflow-y: scroll;
+//   scroll-behavior: smooth;
+//   height: 100vh;
+// }
+
+// .sub-snap {
+//   scroll-snap-align: start;
+// }
 
 .mouse {
   position: absolute;
@@ -52,13 +67,13 @@ body {
   background-color: $white;
 }
 
-@import './screens/notfound';
-@import './screens/loading';
-@import './screens/home';
-@import './partials/navbar';
-@import './screens/section';
-@import './screens/works';
-@import './screens/blogs';
-@import './screens/skills';
-@import './screens/about';
-@import './screens/contact';
+@import "./screens/notfound";
+@import "./screens/loading";
+@import "./screens/home";
+@import "./partials/navbar";
+@import "./screens/section";
+@import "./screens/works";
+@import "./screens/blogs";
+@import "./screens/skills";
+@import "./screens/about";
+@import "./screens/contact";

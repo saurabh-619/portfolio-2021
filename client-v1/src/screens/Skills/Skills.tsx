@@ -49,7 +49,7 @@ export const Skills = () => {
     } else {
       return setFactors({
         left: widthOfScreen / 3,
-        top: widthOfScreen / 2.65,
+        top: widthOfScreen / 2.75,
       })
     }
   }

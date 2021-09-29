@@ -1,16 +1,16 @@
-import { motion, useAnimation } from 'framer-motion';
-import React, { useEffect } from 'react';
-import { TechnologiesEnum, WorkType } from '../../types';
+import { motion, useAnimation } from "framer-motion"
+import React, { useEffect } from "react"
+import { TechnologiesEnum, WorkType } from "../../types"
 import {
   fadeUpAnimation,
   headingAnimation,
   staggerTransition,
   staggerWrapper,
   workImageAnimation,
-} from '../../utills/animations';
-import { dot } from '../../utills/constants';
-import { useInView } from 'react-intersection-observer';
-import { ExternalLink } from 'react-feather';
+} from "../../utills/animations"
+import { dot } from "../../utills/constants"
+import { useInView } from "react-intersection-observer"
+import { ExternalLink } from "react-feather"
 
 export const Work: React.FC<WorkType> = ({
   id,
@@ -22,31 +22,31 @@ export const Work: React.FC<WorkType> = ({
   url,
   bgColor,
 }) => {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView()
 
-  const imageController = useAnimation();
-  const wrapperController = useAnimation();
-  const numController = useAnimation();
+  const imageController = useAnimation()
+  const wrapperController = useAnimation()
+  const numController = useAnimation()
 
-  const { initial, animate } = workImageAnimation(0.85, 2.5, 1);
+  const { initial, animate } = workImageAnimation(0.85, 2.5, 1)
 
   useEffect(() => {
     if (inView) {
-      imageController.start({ ...animate, scale: 0.9 });
-      wrapperController.start('animate');
-      numController.start('animate');
+      imageController.start({ ...animate, scale: 0.9 })
+      wrapperController.start("animate")
+      numController.start("animate")
     }
-  }, [inView]);
+  }, [inView])
 
-  const headingVarient = headingAnimation(30, 0.4);
+  const headingVarient = headingAnimation(30, 0.4)
 
-  const numberVarient = fadeUpAnimation(30, 0.4, 1);
+  const numberVarient = fadeUpAnimation(30, 0.4, 1)
 
   return (
     <div
-      className="container work "
+      className="container work snap sub-snap"
       style={{
-        background: mockupUrl !== '' ? bgColor : `url(${bgImageUrl})`,
+        background: mockupUrl !== "" ? bgColor : `url(${bgImageUrl})`,
       }}
     >
       {mockupUrl && (
@@ -77,14 +77,24 @@ export const Work: React.FC<WorkType> = ({
               <ExternalLink size={20} />
             </span>
           </motion.a>
-          <motion.h3 className="desc font-main20-R" variants={headingVarient} ref={ref}>
+          <motion.h3
+            className="desc font-main20-R"
+            variants={headingVarient}
+            ref={ref}
+          >
             {desc}
           </motion.h3>
           <motion.div className="technologies" transition={staggerTransition()}>
             {technologies.map((tech: TechnologiesEnum, index) => (
-              <motion.div key={index} className="tech" variants={headingVarient}>
+              <motion.div
+                key={index}
+                className="tech"
+                variants={headingVarient}
+              >
                 <img src={dot} alt="dot" className="dot" />
-                <div className="title font-medium17-M">{tech.split('~')[1]}</div>
+                <div className="title font-medium17-M">
+                  {tech.split("~")[1]}
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -99,5 +109,5 @@ export const Work: React.FC<WorkType> = ({
         </motion.div>
       </div>
     </div>
-  );
-};
+  )
+}

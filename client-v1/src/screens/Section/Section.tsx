@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react';
-import { SectionProps } from '../../types';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { transitions } from '../../utills/animations';
+import React, { useEffect } from "react"
+import { SectionProps } from "../../types"
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import { transitions } from "../../utills/animations"
 
 export const Section: React.FC<SectionProps> = ({ sectionTitle }) => {
-  const { ref, inView } = useInView();
-  const animate = useAnimation();
+  const { ref, inView } = useInView()
+  const animate = useAnimation()
 
   useEffect(() => {
     if (inView) {
-      animate.start('animate');
+      animate.start("animate")
     }
-  }, [inView]);
+  }, [inView])
 
   const animateVariant = {
     initial: { y: 300, opacity: 0 },
@@ -21,28 +21,28 @@ export const Section: React.FC<SectionProps> = ({ sectionTitle }) => {
       opacity: 1,
       transition: { duration: 1, delayChildren: 1 },
     },
-  };
+  }
 
   const leftVariant = {
     initial: { opacity: 0 },
     animate: {
-      x: '-100%',
+      x: "-100%",
       opacity: [0, 0.2, 0.3, 0.8, 1],
       transition: { ...transitions, duration: 0.7 },
     },
-  };
+  }
 
   const rightVariant = {
     initial: { opacity: 0 },
     animate: {
-      x: '100%',
+      x: "100%",
       opacity: [0, 0.2, 0.3, 0.8, 1],
       transition: { ...transitions, duration: 0.7 },
     },
-  };
+  }
 
   return (
-    <div id={`section-${sectionTitle}`} className="container snap section">
+    <div id={`section-${sectionTitle}`} className="container snap newsection">
       <motion.div
         className="title-wrapper"
         variants={animateVariant}
@@ -60,5 +60,5 @@ export const Section: React.FC<SectionProps> = ({ sectionTitle }) => {
         </motion.h1>
       </motion.div>
     </div>
-  );
-};
+  )
+}
