@@ -48,8 +48,8 @@ export const Skills = () => {
       })
     } else {
       return setFactors({
-        left: widthOfScreen / 5,
-        top: widthOfScreen / 3,
+        left: widthOfScreen / 3,
+        top: widthOfScreen / 2.65,
       })
     }
   }
@@ -71,15 +71,15 @@ export const Skills = () => {
   const mobileAligns = (index: number) => {
     return {
       left:
-        factors?.left * 0.85 * (index % 3) +
-        ((index / 3) % 2) * 0.02 +
-        10 +
-        0.984 * (Math.random() - 0.5) * 0.298,
+        factors?.left * (index % 3) +
+        ((index / 3) % 2) * 20 +
+        20 +
+        20.56123 * (Math.random() - 0.5) * 2,
       top:
-        factors?.top * 0.65 * Math.floor(index / 3) +
+        factors?.top * Math.floor(index / 3) +
         ((index / 3) % 2) * 5 +
-        13 +
-        0.983 * (Math.random() - 0.5) * 0.159,
+        15 +
+        45.34 * (Math.random() - 0.5) * 1.59,
     }
   }
 
@@ -97,7 +97,6 @@ export const Skills = () => {
         23.3412312 * (Math.random() - 0.5) * 2,
     }
   }
-
   return (
     <div id="skills" className="snap" onMouseMove={handleMouseOver}>
       {skills?.map((skill: string, index) => (
