@@ -45,9 +45,10 @@
 @media screen and (max-width: $sm) {
   .newsection {
     width: 100vw !important;
+    overflow-x: hidden !important;
+
     & .title-wrapper {
       position: static !important;
-      overflow: hidden !important;
 
       & .right,
       & .left,

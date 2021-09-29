@@ -64,7 +64,10 @@ export const Head = () => {
         name="google-site-verification"
         content="pfo_pKe7MHI3ukNjelGPi4fHbuREEVgNlw4oxW6n9No"
       />
-
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1"
+      />
       <link rel="canonical" href={seo.url} />
     </Helmet>
   )
