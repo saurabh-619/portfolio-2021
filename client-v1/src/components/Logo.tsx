@@ -1,8 +1,8 @@
-import { Link } from '@reach/router';
-import { motion } from 'framer-motion';
-import React from 'react';
-import { LogoProps, LogoVarient } from '../types';
-import { getLogoSrc } from '../utills/common';
+import { Link } from "@reach/router"
+import { motion } from "framer-motion"
+import React from "react"
+import { LogoProps, LogoVarient } from "../types"
+import { getLogoSrc } from "../utills/common"
 export const Logo: React.FC<LogoProps> = ({
   size = 30,
   varient = LogoVarient.primary,
@@ -11,7 +11,7 @@ export const Logo: React.FC<LogoProps> = ({
   const hamVariant = {
     initial: { y: 20, opacity: 0 },
     animate: { y: 0, opacity: 1, transition: { duration: 1 } },
-  };
+  }
 
   return (
     <Link to="#home">
@@ -26,5 +26,5 @@ export const Logo: React.FC<LogoProps> = ({
         animate="animate"
       />
     </Link>
-  );
-};
+  )
+}

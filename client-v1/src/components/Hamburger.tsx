@@ -1,18 +1,22 @@
-import { motion, useAnimation } from 'framer-motion';
-import React, { useEffect } from 'react';
-import { menuIcon, closeIcon } from '../utills/constants';
+import { motion, useAnimation } from "framer-motion"
+import React, { useEffect } from "react"
+import { menuIcon, closeIcon } from "../utills/constants"
 
 interface HamProps {
-  size?: number;
-  isNavClicked: boolean;
-  onClick: (e: any) => void;
+  size?: number
+  isNavClicked: boolean
+  onClick: (e: any) => void
 }
 
-export const Hamburger: React.FC<HamProps> = ({ size = 30, isNavClicked, onClick }) => {
+export const Hamburger: React.FC<HamProps> = ({
+  size = 30,
+  isNavClicked,
+  onClick,
+}) => {
   const hamVariant = {
     initial: { y: 20, opacity: 0 },
     animate: { y: 0, opacity: 1, transition: { duration: 1 } },
-  };
+  }
 
   return (
     <>
@@ -28,5 +32,5 @@ export const Hamburger: React.FC<HamProps> = ({ size = 30, isNavClicked, onClick
         animate="animate"
       />
     </>
-  );
-};
+  )
+}

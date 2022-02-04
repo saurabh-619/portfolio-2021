@@ -32,20 +32,36 @@ class Work {
 }
 
 export const worksData: WorkType[] = [
+  // new Work(
+  //   "01",
+  //   "coderhouse (in progress)",
+  //   "web app & realtime voice call",
+  //   [
+  //     TechnologiesEnum.reactjs,
+  //     TechnologiesEnum.recoiljs,
+  //     TechnologiesEnum.webrtc,
+  //     TechnologiesEnum.socketio,
+  //   ],
+  //   "/images/bgs/coderhouse.jpg",
+  //   "",
+  //   "",
+  //   ""
+  // ),
   new Work(
     "01",
-    "coderhouse (in progress)",
-    "web app & realtime voice call",
+    "just eats",
+    "realtime food delivery app",
     [
-      TechnologiesEnum.reactjs,
-      TechnologiesEnum.recoiljs,
-      TechnologiesEnum.webrtc,
-      TechnologiesEnum.socketio,
+      TechnologiesEnum.reactnative,
+      TechnologiesEnum.nestjs,
+      TechnologiesEnum.graphql,
+      TechnologiesEnum.apollo,
+      TechnologiesEnum.typescript,
     ],
-    "/images/bgs/coderhouse.jpg",
     "",
-    "",
-    ""
+    "/images/bgs/just-eats.png",
+    "https://github.com/saurabh-619/just-eats",
+    "#A6B1E1"
   ),
   new Work(
     "02",

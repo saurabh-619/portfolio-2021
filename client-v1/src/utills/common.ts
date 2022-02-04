@@ -1,61 +1,94 @@
-import { BlogType, LogoVarient } from '../types';
-import { iconMap, logo0, logo1, logo2, logo5 } from './constants';
+import { BlogType, LogoVarient } from "../types"
+import { iconMap, logo0, logo1, logo2, logo5 } from "./constants"
 
 export const getLogoSrc = (varient?: LogoVarient) => {
   switch (varient) {
     case LogoVarient.primary:
-      return logo0;
+      return logo0
     case LogoVarient.secondary:
-      return logo1;
+      return logo1
     case LogoVarient.tertiary:
-      return logo2;
+      return logo2
     default:
-      return logo5;
+      return logo5
   }
-};
+}
 
 export const getIconFromTech = (icon: string): string => {
-  return iconMap[icon];
-};
+  return iconMap[icon]
+}
 
 const compareForSortingWithLikes = (a: BlogType, b: BlogType) => {
   if (a.likes > b.likes) {
-    return -1;
+    return -1
   }
   if (a.likes < b.likes) {
-    return 1;
+    return 1
   }
-  return 0;
-};
+  return 0
+}
 
 export const sortPostsWithLikes = (posts: BlogType[]) => {
-  return posts.sort(compareForSortingWithLikes);
-};
+  return posts.sort(compareForSortingWithLikes)
+}
 
 const compareForSortingWithDate = (a: BlogType, b: BlogType) => {
   if (parseInt(a.timeStamp) > parseInt(b.timeStamp)) {
-    return -1;
+    return -1
   }
   if (parseInt(a.timeStamp) < parseInt(b.timeStamp)) {
-    return 1;
+    return 1
   }
-  return 0;
-};
+  return 0
+}
 
 export const sortPostsWithDate = (posts: BlogType[]) => {
-  return posts.sort(compareForSortingWithDate);
-};
+  return posts.sort(compareForSortingWithDate)
+}
 
 const compareForSortingWithId = (a: BlogType, b: BlogType) => {
   if (a.id < b.id) {
-    return -1;
+    return -1
   }
   if (a.id > b.id) {
-    return 1;
+    return 1
   }
-  return 0;
-};
+  return 0
+}
 
 export const sortPostsWithId = (posts: BlogType[]) => {
-  return posts.sort(compareForSortingWithId);
-};
+  return posts.sort(compareForSortingWithId)
+}
+
+export const getHashNodeBloggingData = async () => {
+  const res = await fetch("https://api.hashnode.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query: `query GetAllHashnodePosts{
+        user(username:"saurabh-107") {
+          _id
+          name
+          location
+          blogHandle
+          publicationDomain  
+          publication {
+            posts {
+              _id
+              slug
+              title
+              totalReactions
+              dateAdded 
+              coverImage 
+              brief
+            }
+          }
+        }
+      }`,
+    }),
+  })
+
+  return await res.json()
+}

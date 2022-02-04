@@ -1,22 +1,22 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import { transitions } from '../utills/animations';
+import { motion } from "framer-motion"
+import React from "react"
+import { transitions } from "../utills/animations"
 
 export const NavMenu = ({ setNavClicked }: { setNavClicked: any }) => {
   const bgAnimation = {
     hidden: {
-      y: '100%',
+      y: "100%",
     },
     show: {
       y: 0,
       transition: { duration: 0.8, delayChildren: 0.8 },
     },
     exit: {
-      y: '-100%',
+      y: "-100%",
       opacity: 0,
       transition: { duration: 1.5 },
     },
-  };
+  }
 
   const ulAnimation = {
     show: {
@@ -25,7 +25,7 @@ export const NavMenu = ({ setNavClicked }: { setNavClicked: any }) => {
     exit: {
       transition: { staggerChildren: 0.15 },
     },
-  };
+  }
 
   const liItemAnimation = {
     hidden: {
@@ -42,16 +42,16 @@ export const NavMenu = ({ setNavClicked }: { setNavClicked: any }) => {
       opacity: 0,
       transition: { duration: 0.2 },
     },
-  };
+  }
 
   const whileHoverNavigation = {
     scale: 1.1,
-    transition: { ...transitions, type: 'spring', duration: 0.2 },
-  };
+    transition: { ...transitions, type: "spring", duration: 0.2 },
+  }
 
   const handleNavOptionClicked = () => {
-    setNavClicked((prev: any) => !prev);
-  };
+    setNavClicked((prev: any) => !prev)
+  }
 
   return (
     <motion.div
@@ -68,7 +68,7 @@ export const NavMenu = ({ setNavClicked }: { setNavClicked: any }) => {
           whileHover={whileHoverNavigation}
           onClick={handleNavOptionClicked}
         >
-          <a href={'#home'}>home</a>
+          <a href={"#home"}>home</a>
         </motion.li>
         <motion.li
           className="font-h160-B"
@@ -76,7 +76,7 @@ export const NavMenu = ({ setNavClicked }: { setNavClicked: any }) => {
           whileHover={whileHoverNavigation}
           onClick={handleNavOptionClicked}
         >
-          <a href={'#section-works'}>works</a>
+          <a href={"#section-works"}>works</a>
         </motion.li>
         <motion.li
           className="font-h160-B"
@@ -84,7 +84,7 @@ export const NavMenu = ({ setNavClicked }: { setNavClicked: any }) => {
           whileHover={whileHoverNavigation}
           onClick={handleNavOptionClicked}
         >
-          <a href={'#section-blogs'}>blogs</a>
+          <a href={"#section-blogs"}>blogs</a>
         </motion.li>
         <motion.li
           className="font-h160-B"
@@ -92,7 +92,7 @@ export const NavMenu = ({ setNavClicked }: { setNavClicked: any }) => {
           whileHover={whileHoverNavigation}
           onClick={handleNavOptionClicked}
         >
-          <a href={'#section-skills'}>skills</a>
+          <a href={"#section-skills"}>skills</a>
         </motion.li>
         <motion.li
           className="font-h160-B"
@@ -100,7 +100,7 @@ export const NavMenu = ({ setNavClicked }: { setNavClicked: any }) => {
           whileHover={whileHoverNavigation}
           onClick={handleNavOptionClicked}
         >
-          <a href={'#section-about'}>about</a>
+          <a href={"#section-about"}>about</a>
         </motion.li>
         <motion.li
           className="font-h160-B"
@@ -108,9 +108,9 @@ export const NavMenu = ({ setNavClicked }: { setNavClicked: any }) => {
           whileHover={whileHoverNavigation}
           onClick={handleNavOptionClicked}
         >
-          <a href={'#section-contact'}>contact</a>
+          <a href={"#section-contact"}>contact</a>
         </motion.li>
       </motion.ul>
     </motion.div>
-  );
-};
+  )
+}

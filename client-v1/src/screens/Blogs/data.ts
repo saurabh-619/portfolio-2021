@@ -1,6 +1,6 @@
 import { BloggingSites, BlogType, TechnologiesEnum } from "../../types"
 
-class Blog {
+export class Blog {
   id: number
   name: string
   desc: string

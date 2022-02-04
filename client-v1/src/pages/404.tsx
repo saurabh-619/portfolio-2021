@@ -1,8 +1,8 @@
-import React from 'react';
-import { NotFound } from '../screens';
+import React from "react"
+import { NotFound } from "../screens"
 
 const PageNotFound = () => {
-  return <NotFound />;
-};
+  return <NotFound />
+}
 
-export default PageNotFound;
+export default PageNotFound

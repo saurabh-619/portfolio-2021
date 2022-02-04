@@ -1,9 +1,9 @@
-import { motion, useAnimation } from 'framer-motion';
-import React, { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { BloggingSites, BlogType, TechnologiesEnum } from '../../types';
-import { imageAnimation, transitions } from '../../utills/animations';
-import { getIconFromTech } from '../../utills/common';
+import { motion, useAnimation } from "framer-motion"
+import React, { useEffect } from "react"
+import { useInView } from "react-intersection-observer"
+import { BloggingSites, BlogType, TechnologiesEnum } from "../../types"
+import { imageAnimation, transitions } from "../../utills/animations"
+import { getIconFromTech } from "../../utills/common"
 
 const Blog: React.FC<BlogType> = ({
   name,
@@ -15,16 +15,16 @@ const Blog: React.FC<BlogType> = ({
   timeStamp,
   likes,
 }) => {
-  const { ref, inView } = useInView();
-  const blogController = useAnimation();
-  const imgController = useAnimation();
+  const { ref, inView } = useInView()
+  const blogController = useAnimation()
+  const imgController = useAnimation()
 
   useEffect(() => {
     if (inView) {
-      imgController.start('animate');
-      blogController.start('animate');
+      imgController.start("animate")
+      blogController.start("animate")
     }
-  }, [inView]);
+  }, [inView])
 
   const fadeUpAnimationNew = {
     initial: {
@@ -39,7 +39,7 @@ const Blog: React.FC<BlogType> = ({
         duration: 0.8,
       },
     },
-  };
+  }
   return (
     <motion.div
       className="blog"
@@ -57,7 +57,12 @@ const Blog: React.FC<BlogType> = ({
         animate={imgController}
       />
       <div className="content">
-        <motion.a className="font-h430-B name" href={blogUrl} target="_blank" rel="noreferrer">
+        <motion.a
+          className="font-h430-B name"
+          href={blogUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
           {name.length < 50 ? name : `${name.substring(0, 50)} ...`}
         </motion.a>
 
@@ -85,7 +90,7 @@ const Blog: React.FC<BlogType> = ({
               <div key={index} className="icon-neu">
                 <img
                   key={index}
-                  src={getIconFromTech(tech.split('~')[0])}
+                  src={getIconFromTech(tech.split("~")[0])}
                   alt="tech-icon"
                   className="tech-icon"
                 />
@@ -95,7 +100,7 @@ const Blog: React.FC<BlogType> = ({
         </div>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog
